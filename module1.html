@@ -110,10 +110,10 @@
 <div class="main-wrapper">
 <!-- 工具栏 -->
 <div class="toolbar">
-<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;">☰ 目录</button>
-<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;">💬 演讲词</button>
+<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;"> 目录</button>
+<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;"> 演讲词</button>
 <div class="counter" id="counter">1 / 22</div>
-<button class="btn" id="fullBtn">⛶ 全屏</button>
+<button class="btn" id="fullBtn"> 全屏</button>
 </div>
 <!-- 内容行：幻灯片舞台 + 演讲词面板 -->
 <div class="content-area">
@@ -277,7 +277,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>1. 采购目录浏览：</b> 申领单位基于已发布且生效的采购目录查看可申领用品，按品目类别、用品名称、协议单价和供应商筛选所需办公用品及耗材。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 1" class="actual-shot" onerror="this.style.display='none'" src="images/model1/1.png"/>
+<div class="img-placeholder"><img alt="图片 1" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/1.png"/>
 <div class="img-placeholder-tag">图片 1</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -289,7 +289,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>2. 我的申领车：</b> 经办人将所需用品加入申领车，系统自动计算申领数量、协议单价和申领金额，提交前可统一核对申领明细。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 2" class="actual-shot" onerror="this.style.display='none'" src="images/model1/2.png"/>
+<div class="img-placeholder"><img alt="图片 2" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/2.png"/>
 <div class="img-placeholder-tag">图片 2</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -298,7 +298,7 @@
 </div>
 </div>
 <div class="shot-card" style="margin-top: 10px;">
-<div class="img-placeholder"><img alt="图片 3" class="actual-shot" onerror="this.style.display='none'" src="images/model1/3.png"/>
+<div class="img-placeholder"><img alt="图片 3" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/3.png"/>
 <div class="img-placeholder-tag">图片 3</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -310,7 +310,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>3. 申领提交与额度校验：</b> 申领提交时，系统自动校验年度剩余额度和季度浮动阈值；年度剩余额度不足时阻断提交，超过季度浮动阈值时标记为超额度申领并进入升级审批。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 4" class="actual-shot" onerror="this.style.display='none'" src="images/model1/4.png"/>
+<div class="img-placeholder"><img alt="图片 4" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/4.png"/>
 <div class="img-placeholder-tag">图片 4</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -333,7 +333,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>4. 单位审批：</b> 申领单提交后进入单位审批，单位负责人审核本单位申领内容。未触发超额度规则的申领，审批通过后进入供应商配送环节。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 5" class="actual-shot" onerror="this.style.display='none'" src="images/model1/5.png"/>
+<div class="img-placeholder"><img alt="图片 5" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/5.png"/>
 <div class="img-placeholder-tag">图片 5</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -345,7 +345,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>5. 超额度审批：</b> 超过季度浮动阈值的申领，经单位审批通过后升级至警保部审批，由警保部结合额度执行情况和实际保障需要进行审核。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 6" class="actual-shot" onerror="this.style.display='none'" src="images/model1/6.png"/>
+<div class="img-placeholder"><img alt="图片 6" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/6.png"/>
 <div class="img-placeholder-tag">图片 6</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -368,7 +368,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>6. 供应商配送单生成：</b> 申领审批通过后，系统按供应商自动拆分配送单，内网侧保留申领单位、用品明细和配送状态，供应商侧生成待接单任务。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 7" class="actual-shot" onerror="this.style.display='none'" src="images/model1/7.png"/>
+<div class="img-placeholder"><img alt="图片 7" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/7.png"/>
 <div class="img-placeholder-tag">图片 7</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -381,7 +381,7 @@
 <p class="scene-line"><b>7. 供应商接单与配送：</b> 供应商在互联网侧移动端接收配送任务，只查看配送品目、数量和必要配送信息，接单后反馈预计送达时间。</p>
 <div class="mobile-shot-grid">
 <div class="shot-card mobile">
-<div class="img-placeholder"><img alt="图片 8" class="actual-shot" onerror="this.style.display='none'" src="images/model1/8.png"/>
+<div class="img-placeholder"><img alt="图片 8" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/8.png"/>
 <div class="img-placeholder-tag">图片 8</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg>
@@ -390,7 +390,7 @@
 </div>
 </div>
 <div class="shot-card mobile">
-<div class="img-placeholder"><img alt="图片 9" class="actual-shot" onerror="this.style.display='none'" src="images/model1/9.png"/>
+<div class="img-placeholder"><img alt="图片 9" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/9.png"/>
 <div class="img-placeholder-tag">图片 9</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg>
@@ -399,7 +399,7 @@
 </div>
 </div>
 <div class="shot-card mobile">
-<div class="img-placeholder"><img alt="图片 10" class="actual-shot" onerror="this.style.display='none'" src="images/model1/10.png"/>
+<div class="img-placeholder"><img alt="图片 10" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/10.png"/>
 <div class="img-placeholder-tag">图片 10</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg>
@@ -423,7 +423,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>8. 送达确认与状态回传：</b> 供应商完成配送后确认送达，配送状态回传至内网业务系统，申领单位和管理端可查看配送进度、送达结果和订单履约情况。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 11" class="actual-shot" onerror="this.style.display='none'" src="images/model1/11.png"/>
+<div class="img-placeholder"><img alt="图片 11" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/11.png"/>
 <div class="img-placeholder-tag">图片 11</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -432,7 +432,7 @@
 </div>
 </div>
 <div class="shot-card" style="margin-top: 10px;">
-<div class="img-placeholder"><img alt="图片 12" class="actual-shot" onerror="this.style.display='none'" src="images/model1/12.png"/>
+<div class="img-placeholder"><img alt="图片 12" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/12.png"/>
 <div class="img-placeholder-tag">图片 12</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -444,7 +444,7 @@
 <div class="scene-block">
 <p class="scene-line">管理端可对供应商配送进度、送达结果和订单履约情况进行追踪。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 13" class="actual-shot" onerror="this.style.display='none'" src="images/model1/13.png"/>
+<div class="img-placeholder"><img alt="图片 13" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/13.png"/>
 <div class="img-placeholder-tag">图片 13</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -467,7 +467,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>10. 使用清单与配送单打印：</b> 系统根据申领和配送结果生成使用清单和配送单，支持预览打印，便于签收确认、归档核对、报销支撑和后续统计。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 14" class="actual-shot" onerror="this.style.display='none'" src="images/model1/14.png"/>
+<div class="img-placeholder"><img alt="图片 14" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/14.png"/>
 <div class="img-placeholder-tag">图片 14</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -476,7 +476,7 @@
 </div>
 </div>
 <div class="shot-card" style="margin-top: 10px;">
-<div class="img-placeholder"><img alt="图片 15" class="actual-shot" onerror="this.style.display='none'" src="images/model1/15.png"/>
+<div class="img-placeholder"><img alt="图片 15" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/15.png"/>
 <div class="img-placeholder-tag">图片 15</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -499,7 +499,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>11. 消耗统计与履历留痕：</b> 系统对申领数量、消耗金额、用品类别、单位使用情况、额度执行情况和配送履约情况进行统计分析，申领、审批、配送、送达等关键节点形成消息通知和操作履历。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 16" class="actual-shot" onerror="this.style.display='none'" src="images/model1/16.png"/>
+<div class="img-placeholder"><img alt="图片 16" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/16.png"/>
 <div class="img-placeholder-tag">图片 16</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -511,7 +511,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>12. 申领与额度执行分析：</b> 警保部可跟踪各单位申领、消耗和额度执行情况。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 17" class="actual-shot" onerror="this.style.display='none'" src="images/model1/17.png"/>
+<div class="img-placeholder"><img alt="图片 17" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/17.png"/>
 <div class="img-placeholder-tag">图片 17</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -523,7 +523,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>13. 历史资金使用分析：</b> 支持各单位近三年资金使用情况分析，为下一年度需求测算提供参考。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 18" class="actual-shot" onerror="this.style.display='none'" src="images/model1/18.png"/>
+<div class="img-placeholder"><img alt="图片 18" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/18.png"/>
 <div class="img-placeholder-tag">图片 18</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -535,7 +535,7 @@
 <div class="scene-block">
 <p class="scene-line"><b>14. 供应商履约跟踪：</b> 支持配送订单状态和供应商履约情况跟踪。</p>
 <div class="shot-card">
-<div class="img-placeholder"><img alt="图片 19" class="actual-shot" onerror="this.style.display='none'" src="images/model1/19.png"/>
+<div class="img-placeholder"><img alt="图片 19" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model1/19.png"/>
 <div class="img-placeholder-tag">图片 19</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
@@ -636,7 +636,6 @@
 </div>
 </div><!-- /notes-body -->
 </aside>
-
 </div><!-- /content-area -->
 </div><!-- /main-wrapper -->
 <!-- 进度条 -->

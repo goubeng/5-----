@@ -1478,3 +1478,134 @@ html, body {
 .img-placeholder-tag {
   z-index: 3;
 }
+
+
+/* ─────────────────────────────────────────────
+   V7 调整：
+   1. 场景图片保持原比例，宽度 100%，高度自动；
+   2. 所有标签/编号/圆标的渐变底色改为纯色。
+   ───────────────────────────────────────────── */
+
+/* 图片展示：放入 images/modelX/N.png 后，图片按容器宽度 100% 展示，高度按原图比例自动撑开 */
+.img-placeholder.has-image {
+  width: 100%;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+  gap: 0 !important;
+  overflow: hidden;
+  background: transparent !important;
+  border: 1.5px solid rgba(249,215,149,0.22);
+}
+
+.img-placeholder.has-image::before {
+  display: none !important;
+}
+
+.img-placeholder .actual-shot {
+  position: static !important;
+  inset: auto !important;
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  z-index: 1;
+}
+
+.img-placeholder.has-image .img-placeholder-icon,
+.img-placeholder.has-image .img-placeholder-path {
+  display: none !important;
+}
+
+.img-placeholder.has-image .img-placeholder-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+}
+
+/* 统一纯色标签：去掉渐变，采用棕金纯色底 */
+:root {
+  --tag-solid-bg: #B56A25;
+  --tag-solid-border: #C99548;
+  --tag-solid-text: #FFFFFF;
+}
+
+/* 流程当前节点标签 */
+.flow-pill.active {
+  background: var(--tag-solid-bg) !important;
+  color: var(--tag-solid-text) !important;
+  border-color: var(--tag-solid-border) !important;
+  box-shadow: 0 4px 14px rgba(115,47,6,0.28) !important;
+}
+
+/* 建设价值标签 */
+.value-chip {
+  background: var(--tag-solid-bg) !important;
+  color: var(--tag-solid-text) !important;
+  border: 1px solid var(--tag-solid-border) !important;
+  box-shadow: 0 8px 20px rgba(115,47,6,0.24) !important;
+}
+
+/* 封面模块图标、目标编号、模块编号、部署图标等圆形/块状标签 */
+.icon,
+.goal-index,
+.module4-num,
+.deploy-icon,
+.hua-circle-icon {
+  background: var(--tag-solid-bg) !important;
+  color: var(--tag-solid-text) !important;
+  border-color: var(--tag-solid-border) !important;
+  box-shadow: none !important;
+}
+
+/* 文字图标保持纯色，不再出现渐变观感 */
+.text-icon,
+.text-icon.large,
+.text-icon.dark {
+  color: var(--tag-solid-text) !important;
+}
+
+/* 进度条、标题装饰线、全屏导航触发条等装饰渐变改为纯色 */
+.progress-bar,
+.slide h1::after,
+:fullscreen .nav-trigger,
+.fullscreen-active .nav-trigger {
+  background: var(--tag-solid-bg) !important;
+}
+
+/* 安全底线横幅也改成纯色弱底，不使用渐变 */
+.baseline-banner {
+  background: rgba(181,106,37,0.14) !important;
+  border-color: rgba(201,149,72,0.42) !important;
+  border-left-color: var(--tag-solid-bg) !important;
+  color: var(--gold) !important;
+}
+
+/* 其它可能使用渐变的按钮/标签兜底 */
+.module-grid-figma button,
+.module-grid-figma .active,
+.cover-pill,
+.tag,
+.badge {
+  background-image: none !important;
+}
+
+
+
+/* ─── V8：隐藏场景图片左上角“图片1 / 图片2 / 图片3”等编号标识 ─── */
+.img-placeholder-tag {
+  display: none !important;
+}
+
+
+
+/* ─── V9：去掉 1-1 总体建设思路中的 Emoji 图标 ─── */
+.slide-container[data-slide="1"] .brief-card-label .text-icon {
+  display: none !important;
+}
