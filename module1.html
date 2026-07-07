@@ -110,8 +110,8 @@
 <div class="main-wrapper">
 <!-- 工具栏 -->
 <div class="toolbar">
-<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;"> 目录</button>
-<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;"> 演讲词</button>
+<button class="btn" id="toggleSidebarBtn">目录</button>
+<button class="btn" id="toggleNotesBtn">演讲词</button>
 <div class="counter" id="counter">1 / 22</div>
 <button class="btn" id="fullBtn"> 全屏</button>
 </div>
@@ -155,25 +155,25 @@
 <section class="slide">
 <div class="module-label">模块一｜办公用品及耗材</div>
 <div class="slide-page-number">8 / 22</div>
-<h1>2.1 业务现状：线下分散带来的管理难点</h1>
+<h1>2.1 业务现状</h1>
 <p class="subtitle">解决办公用品及耗材管理中“需求不准、额度滞后、配送无痕、统计耗时”的问题。</p>
 <div class="slide-body">
 <div class="pain-grid">
 <div class="pain-card">
 <h3>需求收集靠人工</h3>
-<p>需求靠表格收集，各单位填报进度依赖人工催报。</p>
+<p>需求靠表格收集，进度需人工催报汇总。</p>
 </div>
 <div class="pain-card">
 <h3>额度管控不前置</h3>
-<p>申领过程难以及时掌握额度占用，报销时才发现无额度可报。</p>
+<p>申领时难掌握额度占用，常到报销才发现额度不足。</p>
 </div>
 <div class="pain-card">
 <h3>配送签收靠线下</h3>
-<p>配送签收和清单核对主要依赖线下确认，过程留痕不足。</p>
+<p>配送签收、清单核对依赖线下确认，过程留痕不足。</p>
 </div>
 <div class="pain-card">
 <h3>报销统计靠核对</h3>
-<p>后续报销、统计、历史消耗需要人工反复核对。</p>
+<p>报销统计需人工反复比对单据，耗时且口径易不一。</p>
 </div>
 </div>
 <div class="summary-box">归根结底，问题不是没有流程，而是流程分散、数据分散、过程难追、统计靠人工。</div>
@@ -185,7 +185,7 @@
 <section class="slide">
 <div class="module-label">模块一｜办公用品及耗材</div>
 <div class="slide-page-number">9 / 22</div>
-<h1>2.2 建设方案：前置测算 + 执行闭环</h1>
+<h1>2.2 建设方案</h1>
 <div class="slide-body">
 <div class="two-column">
 <div class="solution-card">
@@ -209,10 +209,10 @@
 <section class="slide">
 <div class="module-label">模块一｜办公用品及耗材</div>
 <div class="slide-page-number">10 / 22</div>
-<h1>2.3 预期成效：从人工核对到集中管控</h1>
+<h1>2.3 预期成效-人工到管控</h1>
 <p class="subtitle">通过任务分发、额度校验、清单生成和统计沉淀，减少人工催报、反复核对和事后补账。</p>
 <div class="slide-body">
-<table class="effect-table">
+<table class="effect-table standard-effect-table">
 <thead>
 <tr>
 <th>指标</th>
@@ -242,13 +242,13 @@
 </tr>
 <tr>
 <td>发票清单</td>
-<td>约 500 余张 / 季度，纸质材料消耗大</td>
-<td>系统生成清单、配送单和消耗统计</td>
-<td>减少人工整理、反复比对和纸张消耗</td>
+<td>约 500 余张 / 季度</td>
+<td>系统生成清单和消耗统计</td>
+<td>减少整理、比对和纸张消耗</td>
 </tr>
 </tbody>
 </table>
-<div class="summary-box">预期效果：减少人工催报、减少反复核对、减少纸质材料整理和纸张消耗，提升额度管控和统计支撑能力。</div>
+<div class="summary-box">预期效果：减少催报、核对、纸质整理和纸张消耗，提升额度管控与统计支撑能力。</div>
 </div>
 </section>
 </div>
@@ -257,7 +257,7 @@
 <section class="slide long-scroll">
 <div class="module-label">模块一｜办公用品及耗材</div>
 <div class="slide-page-number">11 / 22</div>
-<h1>2.4 场景演示：线上申领至消耗统计执行闭环</h1>
+<h1>2.4 场景演示</h1>
 <div class="slide-body">
 <div class="figma-scene">
 <div class="scene-intro">
@@ -563,7 +563,7 @@
 <div class="value-chip">配送有留痕</div>
 <div class="value-chip">统计可分析</div>
 </div>
-<div class="summary-box" style="margin-top: 40px;">需求有依据、额度有管控、配送有留痕、统计可分析。</div>
+<div class="summary-box" style="margin-top: 40px;">核心价值：让办公用品管理从“事后人工核对”，转为“事前有依据、事中有管控、事后有数据”。</div>
 </div>
 </section>
 </div>
@@ -643,6 +643,7 @@
 <div class="progress-bar" id="progressBar"></div>
 </div>
 </div><!-- /app -->
+<script src="data/report-content.js"></script>
 <script>
 (function () {
   'use strict';
@@ -656,6 +657,10 @@
   "prevPage": "index.html"
 };
 
+  if (window.applyReportContent) {
+    window.applyReportContent(PAGE_CONFIG.currentPage);
+  }
+
   const slides    = Array.from(document.querySelectorAll('.slide-container'));
   const notesAll  = Array.from(document.querySelectorAll('.notes-content'));
   const counter   = document.getElementById('counter');
@@ -664,7 +669,10 @@
   const navTrigger = document.getElementById('navTrigger');
   const sidebar    = document.getElementById('sidebar');
   const stage      = document.getElementById('stage');
+  const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+  const toggleNotesBtn = document.getElementById('toggleNotesBtn');
   let current = 0;
+  let navigatingWithFullscreen = false;
   const total = slides.length;
   const SLIDE_W = 1080;
   const SLIDE_H = 607.5;
@@ -688,7 +696,9 @@
   }
 
   function navigateTo(url) {
-    setFullscreenPreference(isFullscreenView());
+    const shouldPreserveFullscreen = isFullscreenView();
+    navigatingWithFullscreen = shouldPreserveFullscreen;
+    setFullscreenPreference(shouldPreserveFullscreen);
     window.location.href = url;
   }
 
@@ -696,6 +706,22 @@
     if (sessionStorage.getItem(FULLSCREEN_STATE_KEY) === '1') {
       document.body.classList.add('fullscreen-active');
     }
+  }
+
+  function syncPanelButtons() {
+    if (toggleSidebarBtn) {
+      toggleSidebarBtn.classList.toggle('active', !document.body.classList.contains('sidebar-hidden'));
+    }
+    if (toggleNotesBtn) {
+      toggleNotesBtn.classList.toggle('active', !document.body.classList.contains('notes-hidden'));
+    }
+  }
+
+  function togglePanel(className) {
+    document.body.classList.toggle(className);
+    document.body.classList.remove('nav-open');
+    syncPanelButtons();
+    requestAnimationFrame(resizeSlides);
   }
 
   /* ─── 全局等比缩放计算器（窗口与全屏统一） ─── */
@@ -842,6 +868,13 @@
     });
   });
 
+  if (toggleSidebarBtn) {
+    toggleSidebarBtn.addEventListener('click', () => togglePanel('sidebar-hidden'));
+  }
+  if (toggleNotesBtn) {
+    toggleNotesBtn.addEventListener('click', () => togglePanel('notes-hidden'));
+  }
+
   /* ─── 全屏 ─── */
   document.getElementById('fullBtn').addEventListener('click', async () => {
     if (document.fullscreenElement || document.body.classList.contains('fullscreen-active')) {
@@ -862,6 +895,10 @@
 
   function syncFullscreen() {
     const isFs = !!document.fullscreenElement;
+    if (!isFs && navigatingWithFullscreen) {
+      setFullscreenPreference(true);
+      return;
+    }
     document.body.classList.toggle('fullscreen-active', isFs);
     setFullscreenPreference(isFs);
     document.body.classList.remove('nav-open');
@@ -917,6 +954,7 @@
   window.showSlide = showSlide;
   window.navigateTo = navigateTo;
   restoreFullscreenPreference();
+  syncPanelButtons();
   
   const initHash = window.location.hash;
   if (initHash === '#last') {

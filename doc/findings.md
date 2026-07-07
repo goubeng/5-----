@@ -6,3 +6,5 @@
 - 2026-07-07 15:12: Module copy source files are markdown extraction tables; HTML should keep existing layout/image placeholders while replacing visible text to match those tables.
 - 2026-07-07 15:34: `module3.html` and `module4.html` already contain complete slide copy and speaker-note copy, so the new extraction files can be generated directly from the current HTML without changing the HTML pages.
 - 2026-07-07 15:55: Meeting-minutes gaps were concentrated in module 4 meeting statistics/roles/reminders, module 3 annual repair count, and module 1 paper consumption; these can be patched without touching layout structure.
+- 2026-07-07 16:05: During native fullscreen page navigation, the browser fires an exit event before the next HTML loads; preserving the presentation fullscreen state requires ignoring that exit while navigation is already in progress.
+- 2026-07-07 16:12: Static HTML pages cannot reliably fetch local markdown directly under `file://`; using markdown as the source and a generated browser JS data file keeps one editable copy while preserving offline opening.

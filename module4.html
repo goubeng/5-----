@@ -110,8 +110,8 @@
 <div class="main-wrapper">
 <!-- 工具栏 -->
 <div class="toolbar">
-<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;"> 目录</button>
-<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;"> 演讲词</button>
+<button class="btn" id="toggleSidebarBtn">目录</button>
+<button class="btn" id="toggleNotesBtn">演讲词</button>
 <div class="counter" id="counter">1 / 22</div>
 <button class="btn" id="fullBtn"> 全屏</button>
 </div>
@@ -155,25 +155,25 @@
 <section class="slide">
 <div class="module-label">模块四｜会场预定</div>
 <div class="slide-page-number">31 / 35</div>
-<h1>5.1 业务现状：沟通繁琐、过程脱节</h1>
+<h1>5.1 业务现状</h1>
 <p class="subtitle">会场预定依赖人工协调与纸质登记，信息不对称容易造成资源冲突或闲置。</p>
 <div class="slide-body">
 <div class="pain-grid">
 <div class="pain-card">
 <h3>会场占用不透明</h3>
-<p>占用情况不公开，申请民警需反复向管理员打电话或在微信群询问“哪天哪个会议室有空”，沟通效率低；按前期估算，全年会议约大几千场，人工确认工作量较大。</p>
+<p>占用不公开，申请民警需电话或微信反复确认；全年会议约大几千场，人工确认压力大。</p>
 </div>
 <div class="pain-card">
 <h3>审核规则难约束</h3>
-<p>最短提前时间、单次时长上限、涉密要求等校验缺乏前置工具拦截，管理决策主要靠管理员人工核查。</p>
+<p>提前时间、时长上限、涉密要求等缺少前置校验，主要靠人工核查。</p>
 </div>
 <div class="pain-card">
 <h3>保障对接易遗漏</h3>
-<p>会场预定成功后，会议所需的桌型、音响、麦克风等保障需求靠口头交接，保障人员极易遗漏，对接脱节。</p>
+<p>桌型、音响、麦克风等保障需求靠口头交接，容易遗漏。</p>
 </div>
 <div class="pain-card">
 <h3>取消变更无留痕</h3>
-<p>会议推迟或取消不能实时联动，管理员无法动态清退占用，使得宝贵的会场空闲时段被白白闲置浪费。</p>
+<p>会议推迟或取消不能实时联动，空闲时段难以及时释放。</p>
 </div>
 </div>
 <div class="summary-box">核心难点：缺乏统一的会场资源台账，申请、确认、保障与清退各个环节没有形成数据闭环。</div>
@@ -185,21 +185,21 @@
 <section class="slide">
 <div class="module-label">模块四｜会场预定</div>
 <div class="slide-page-number">32 / 35</div>
-<h1>5.2 建设方案：会场资源台账 + 会议全生命周期闭环</h1>
+<h1>5.2 建设方案</h1>
 <div class="slide-body">
 <div class="two-column">
 <div class="solution-card">
-<h3>图形化占用图与智能申请</h3>
-<div class="flow-text">会场查询 → 可用性筛选 → 一键选时填单 → 冲突规则拦截</div>
-<p>建立会场台账与图形化甘特图，支持按容量、是否需要涉密会议场所、桌型筛选可用空间。提供快速时间段选择并一键回填。提交时执行容量超载、会场锁定及时间重叠冲突阻断校验，对过近会场进行强提醒二次确认，并在会议开始前提醒相关人员。</p>
+<h3>会场查询与智能申请</h3>
+<div class="flow-text">会场查询 → 选时填单 → 规则校验</div>
+<p>建立会场台账和占用看板，支持按人数、涉密要求、桌型等条件筛选可用会场。提交时自动校验容量、锁定、时间冲突等规则，并支持会前提醒。</p>
 </div>
 <div class="solution-card">
-<h3>闭环审核确认与保障协同</h3>
-<div class="flow-text">待确认队列 → 通过并指派接待员 → 移动端确认执行 → 提前结束释放</div>
-<p>会场管理员通过“待确认队列”处理申请和变更，通过时多选指派接待员或会议保障人员。接待员在移动端接收服务项快照并进行确认，支持保障任务申请转班。进行中的会议支持一键提前结束或会议取消后立即释放后续时段，清退占用。</p>
+<h3>审核确认与保障协同</h3>
+<div class="flow-text">待确认 → 指派接待员 → 移动端确认 → 清退释放</div>
+<p>会场管理员审核申请和变更，通过后指派接待员或保障人员。接待员在移动端确认执行；会议取消或提前结束后，系统及时释放占用时段。</p>
 </div>
 </div>
-<div class="summary-box">建立会场锁定管理机制，由管理员屏蔽特定时段，确保重大保障会议优先占用，屏蔽预定与变更冲突。</div>
+<div class="summary-box">通过会场台账、规则校验、移动端确认和清退释放，形成会议预定全生命周期闭环。</div>
 </div>
 </section>
 </div>
@@ -208,10 +208,10 @@
 <section class="slide">
 <div class="module-label">模块四｜会场预定</div>
 <div class="slide-page-number">33 / 35</div>
-<h1>5.3 预期成效：从无序登记到精准保障</h1>
+<h1>5.3 预期成效-精准保障</h1>
 <p class="subtitle">通过流程线上办理与规则主动校验，提升会场使用效率与会议服务满意度。</p>
 <div class="slide-body">
-<table class="effect-table">
+<table class="effect-table standard-effect-table">
 <thead>
 <tr>
 <th>指标</th>
@@ -223,33 +223,33 @@
 <tbody>
 <tr>
 <td>占用查询</td>
-<td>向管理员电话询问或微信群反复协调</td>
-<td>甘特图多视角直观呈现，支持按条件自动筛选</td>
-<td>信息完全透明，消除信息死角</td>
+<td>电话或微信群反复协调</td>
+<td>甘特图展示，按条件筛选</td>
+<td>信息透明</td>
 </tr>
 <tr>
 <td>冲突控制</td>
-<td>靠管理员纸质登记簿，容易遗漏撞场</td>
-<td>多维度规则引擎实时校验，直接拦截冲突</td>
-<td>预定冲突与撞场率降至 0%</td>
+<td>纸质登记，易遗漏撞场</td>
+<td>规则实时校验并拦截</td>
+<td>撞场率降至 0%</td>
 </tr>
 <tr>
 <td>保障对接</td>
-<td>预定与保障脱节，微信通知保障易漏记</td>
-<td>保障需求与工单绑定，自动派发接收</td>
-<td>保障任务完全线上化，对接零失误</td>
+<td>保障靠微信，易漏记</td>
+<td>保障需求绑定任务</td>
+<td>对接更准确</td>
 </tr>
 <tr>
 <td>周转利用</td>
-<td>取消或提前结束无反馈，占用时段被闲置</td>
-<td>已结束或提前结束一键操作，实时释放时段</td>
-<td>缩短闲置时间，会场周转率提升 30% 以上</td>
+<td>取消结束反馈慢，时段闲置</td>
+<td>一键结束，实时释放</td>
+<td>周转率提升 30%+</td>
 </tr>
 <tr>
 <td>年度统计</td>
-<td>全年会议约大几千场，参会人次原来多为粗略估算</td>
-<td>系统沉淀会议场次、参会人次、取消率和保障人员工作量</td>
-<td>统计准确度提升，数据可用于复盘分析</td>
+<td>全年约大几千场，人数粗估</td>
+<td>沉淀场次、人次、取消率和工作量</td>
+<td>统计更准确</td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +261,7 @@
 <section class="slide long-scroll">
 <div class="module-label">模块四｜会场预定</div>
 <div class="slide-page-number">34 / 35</div>
-<h1>5.4 会议预定全生命周期流程</h1>
+<h1>5.4 场景演示</h1>
 <div class="slide-body"><div class="figma-scene"><div class="scene-intro">
 <p>以一次日常会议预定、审核、保障派发到提前结束清退为例，展示系统如何形成全生命周期闭环。</p>
 <div class="red-callout">解决会场预定中“预定容易撞、保障对不上、变更没人管、闲置难释放”的问题。</div>
@@ -282,6 +282,7 @@
 </div>
 <div class="scene-block">
 <p class="scene-line"><b>1. 会场查询：</b>申请人通过会场占用查询或会场可用性查询，按日期、意向时段、参会人数、涉密要求等条件筛选可用会场，系统同步展示已有预定和会场锁定时段。</p>
+<div class="model4-image-stack">
 <div class="shot-card">
 <div class="img-placeholder">
 <img alt="图片 1" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/1.png"/>
@@ -290,6 +291,27 @@
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
 <div class="img-placeholder-path">images/model4/1.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 2" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/2.png"/>
+<div class="img-placeholder-tag">图片 2</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/2.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 3" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/3.png"/>
+<div class="img-placeholder-tag">图片 3</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/3.png</div>
+</div>
 </div>
 </div>
 </div>
@@ -310,29 +332,31 @@
 </div>
 <div class="scene-block">
 <p class="scene-line"><b>2. 提申请：</b>申请人选择会场后进入预定表单，填写会议主题、会议时间、参会人数、会议属性、会场配置需求和保障与服务内容，可保存草稿或提交申请。</p>
+<div class="model4-image-stack">
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 2" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/2.png"/>
-<div class="img-placeholder-tag">图片 2</div>
+<img alt="图片 4" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/4.png"/>
+<div class="img-placeholder-tag">图片 4</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/2.png</div>
+<div class="img-placeholder-path">images/model4/4.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 5" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/5.png"/>
+<div class="img-placeholder-tag">图片 5</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/5.png</div>
+</div>
 </div>
 </div>
 </div>
 <div class="scene-block">
 <p class="scene-line"><b>3. 规则校验：</b>系统围绕提前申请、会场容量、会议时长、时间冲突、锁定占用、桌型要求、涉密属性和视频保障等规则进行自动校验，命中阻断类规则时禁止提交，命中提醒类规则时弹窗提示后由申请人确认。</p>
-<div class="shot-card">
-<div class="img-placeholder">
-<img alt="图片 3" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/3.png"/>
-<div class="img-placeholder-tag">图片 3</div>
-<div class="img-placeholder-icon">
-<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
-</div>
-<div class="img-placeholder-path">images/model4/3.png</div>
-</div>
-</div>
 </div>
 </section>
 <section class="figma-stage-card">
@@ -353,12 +377,13 @@
 <p class="scene-line"><b>4. 管理员确认：</b>预定提交后进入待确认队列，会场管理员查看预定详情，可进行确认通过、拒绝或取消；确认通过时可指派会议保障人员。</p>
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 4" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/4.png"/>
-<div class="img-placeholder-tag">图片 4</div>
+<img alt="图片 6" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/6.png"/>
+<div class="img-placeholder-tag">图片 6</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/4.png</div>
+<div class="img-placeholder-path">images/model4/6.png</div>
+</div>
 </div>
 </div>
 </div>
@@ -379,14 +404,78 @@
 </div>
 <div class="scene-block">
 <p class="scene-line"><b>5. 保障协同：</b>保障人员接收会议保障任务，查看会议详情、联系人、议程和保障与服务需求；如无法承接，可发起转班，系统同步通知新旧保障人员。</p>
+<div class="model4-image-grid three-up">
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 5" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/5.png"/>
-<div class="img-placeholder-tag">图片 5</div>
+<img alt="图片 7" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/7.png"/>
+<div class="img-placeholder-tag">图片 7</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/5.png</div>
+<div class="img-placeholder-path">images/model4/7.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 8" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/8.png"/>
+<div class="img-placeholder-tag">图片 8</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/8.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 9" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/9.png"/>
+<div class="img-placeholder-tag">图片 9</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/9.png</div>
+</div>
+</div>
+</div>
+<div class="model4-image-grid four-up">
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 10" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/10.png"/>
+<div class="img-placeholder-tag">图片 10</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/10.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 11" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/11.png"/>
+<div class="img-placeholder-tag">图片 11</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/11.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 12" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/12.png"/>
+<div class="img-placeholder-tag">图片 12</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/12.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 13" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/13.png"/>
+<div class="img-placeholder-tag">图片 13</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/13.png</div>
+</div>
 </div>
 </div>
 </div>
@@ -407,14 +496,26 @@
 </div>
 <div class="scene-block">
 <p class="scene-line"><b>6. 变更、取消与提前结束：</b>会议未归档前，申请人可根据权限发起取消、变更、修改保障与服务或提前结束；变更申请重新进入管理员确认，原会议时段在变更处理中继续占用。</p>
+<div class="model4-image-stack">
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 6" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/6.png"/>
-<div class="img-placeholder-tag">图片 6</div>
+<img alt="图片 14" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/14.png"/>
+<div class="img-placeholder-tag">图片 14</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/6.png</div>
+<div class="img-placeholder-path">images/model4/14.png</div>
+</div>
+</div>
+<div class="shot-card">
+<div class="img-placeholder">
+<img alt="图片 15" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/15.png"/>
+<div class="img-placeholder-tag">图片 15</div>
+<div class="img-placeholder-icon">
+<svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+</div>
+<div class="img-placeholder-path">images/model4/15.png</div>
+</div>
 </div>
 </div>
 </div>
@@ -437,12 +538,12 @@
 <p class="scene-line"><b>7. 会后归档：</b>会议结束或提前结束后，系统进入归档展示状态，管理员可填写会后备注，系统保留预定详情、服务需求、操作记录和消息通知，便于后续追溯。</p>
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 7" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/7.png"/>
-<div class="img-placeholder-tag">图片 7</div>
+<img alt="图片 16" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/16.png"/>
+<div class="img-placeholder-tag">图片 16</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/7.png</div>
+<div class="img-placeholder-path">images/model4/16.png</div>
 </div>
 </div>
 </div>
@@ -450,12 +551,12 @@
 <p class="scene-line"><b>8. 统计分析：</b>系统对会场使用场次、使用时长、确认状态、执行状态、取消率、提前结束情况和保障人员工作量进行统计分析，支撑会场资源调度和会议保障管理。</p>
 <div class="shot-card">
 <div class="img-placeholder">
-<img alt="图片 8" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/8.png"/>
-<div class="img-placeholder-tag">图片 8</div>
+<img alt="图片 17" class="actual-shot" onerror="this.style.display='none';this.parentElement.classList.remove('has-image')" onload="this.parentElement.classList.add('has-image')" src="images/model4/17.png"/>
+<div class="img-placeholder-tag">图片 17</div>
 <div class="img-placeholder-icon">
 <svg class="img-placeholder-svg" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
 </div>
-<div class="img-placeholder-path">images/model4/8.png</div>
+<div class="img-placeholder-path">images/model4/17.png</div>
 </div>
 </div>
 </div>
@@ -541,6 +642,7 @@
 <div class="progress-bar" id="progressBar"></div>
 </div>
 </div><!-- /app -->
+<script src="data/report-content.js"></script>
 <script>
 (function () {
   'use strict';
@@ -554,6 +656,10 @@
   "prevPage": "module3.html"
 };
 
+  if (window.applyReportContent) {
+    window.applyReportContent(PAGE_CONFIG.currentPage);
+  }
+
   const slides    = Array.from(document.querySelectorAll('.slide-container'));
   const notesAll  = Array.from(document.querySelectorAll('.notes-content'));
   const counter   = document.getElementById('counter');
@@ -562,7 +668,10 @@
   const navTrigger = document.getElementById('navTrigger');
   const sidebar    = document.getElementById('sidebar');
   const stage      = document.getElementById('stage');
+  const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+  const toggleNotesBtn = document.getElementById('toggleNotesBtn');
   let current = 0;
+  let navigatingWithFullscreen = false;
   const total = slides.length;
   const SLIDE_W = 1080;
   const SLIDE_H = 607.5;
@@ -586,7 +695,9 @@
   }
 
   function navigateTo(url) {
-    setFullscreenPreference(isFullscreenView());
+    const shouldPreserveFullscreen = isFullscreenView();
+    navigatingWithFullscreen = shouldPreserveFullscreen;
+    setFullscreenPreference(shouldPreserveFullscreen);
     window.location.href = url;
   }
 
@@ -594,6 +705,22 @@
     if (sessionStorage.getItem(FULLSCREEN_STATE_KEY) === '1') {
       document.body.classList.add('fullscreen-active');
     }
+  }
+
+  function syncPanelButtons() {
+    if (toggleSidebarBtn) {
+      toggleSidebarBtn.classList.toggle('active', !document.body.classList.contains('sidebar-hidden'));
+    }
+    if (toggleNotesBtn) {
+      toggleNotesBtn.classList.toggle('active', !document.body.classList.contains('notes-hidden'));
+    }
+  }
+
+  function togglePanel(className) {
+    document.body.classList.toggle(className);
+    document.body.classList.remove('nav-open');
+    syncPanelButtons();
+    requestAnimationFrame(resizeSlides);
   }
 
   /* ─── 全局等比缩放计算器（窗口与全屏统一） ─── */
@@ -740,6 +867,13 @@
     });
   });
 
+  if (toggleSidebarBtn) {
+    toggleSidebarBtn.addEventListener('click', () => togglePanel('sidebar-hidden'));
+  }
+  if (toggleNotesBtn) {
+    toggleNotesBtn.addEventListener('click', () => togglePanel('notes-hidden'));
+  }
+
   /* ─── 全屏 ─── */
   document.getElementById('fullBtn').addEventListener('click', async () => {
     if (document.fullscreenElement || document.body.classList.contains('fullscreen-active')) {
@@ -760,6 +894,10 @@
 
   function syncFullscreen() {
     const isFs = !!document.fullscreenElement;
+    if (!isFs && navigatingWithFullscreen) {
+      setFullscreenPreference(true);
+      return;
+    }
     document.body.classList.toggle('fullscreen-active', isFs);
     setFullscreenPreference(isFs);
     document.body.classList.remove('nav-open');
@@ -815,6 +953,7 @@
   window.showSlide = showSlide;
   window.navigateTo = navigateTo;
   restoreFullscreenPreference();
+  syncPanelButtons();
   
   const initHash = window.location.hash;
   if (initHash === '#last') {

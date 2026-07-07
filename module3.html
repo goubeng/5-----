@@ -110,8 +110,8 @@
 <div class="main-wrapper">
 <!-- 工具栏 -->
 <div class="toolbar">
-<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;"> 目录</button>
-<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;"> 演讲词</button>
+<button class="btn" id="toggleSidebarBtn">目录</button>
+<button class="btn" id="toggleNotesBtn">演讲词</button>
 <div class="counter" id="counter">1 / 22</div>
 <button class="btn" id="fullBtn"> 全屏</button>
 </div>
@@ -155,21 +155,21 @@
 <section class="slide">
 <div class="module-label">模块三｜物业管理</div>
 <div class="slide-page-number">24 / 30</div>
-<h1>4.1 业务现状：过程分散、记录缺失</h1>
+<h1>4.1 业务现状</h1>
 <p class="subtitle">物业运维长期依赖微信群和电话派单，过程没有留痕，事后难以追溯。</p>
 <div class="slide-body">
 <div class="pain5-grid" style="grid-template-columns: repeat(3, 1fr);">
 <div class="pain5-card">
 <h3>工单难追踪</h3>
-<p>报修通过微信群或电话发起，派单过程无记录，维修进度不透明，处理结果无法统一沉淀，超时无法预警。</p>
+<p>报修靠微信或电话转达，派单无记录，进度不透明，结果难沉淀。</p>
 </div>
 <div class="pain5-card">
 <h3>巡检难落地</h3>
-<p>日常巡检依赖纸质台账，标准不统一，无法规范漏检，现场隐患照片和发现问题难以电子化归档留存。</p>
+<p>巡检靠纸质台账，标准不统一，漏检和异常照片难归档。</p>
 </div>
 <div class="pain5-card">
 <h3>设备底数不清</h3>
-<p>设备信息分散维护，维保到期时间靠人工提醒，维保单位联系方式和维保资料无统一归档，查找效率低。</p>
+<p>设备信息分散，维保靠人工提醒，资料查找效率低。</p>
 </div>
 </div>
 <div class="summary-box">三条业务线的核心问题：过程没有留痕，信息不能沉淀，管理不能前置。</div>
@@ -181,7 +181,7 @@
 <section class="slide">
 <div class="module-label">模块三｜物业管理</div>
 <div class="slide-page-number">25 / 30</div>
-<h1>4.2 建设方案：三线并进 + 统一闭环</h1>
+<h1>4.2 建设方案</h1>
 <div class="slide-body">
 <div class="two-column" style="grid-template-columns: repeat(3, 1fr);">
 <div class="solution-card">
@@ -196,7 +196,7 @@
 </div>
 <div class="solution-card">
 <h3>设备档案统一管理</h3>
-<div class="flow-text">建档 → 维保管理 → 临期提醒 → 工单关联</div>
+<div class="flow-text">建档 → 维保管理 → 临期提醒</div>
 <p>统一维护设备基础信息、维保单位、联系人、维保到期日期和设备附件，系统自动提醒维保临期，同时为工单处理提供设备关联查询支撑。</p>
 </div>
 </div>
@@ -209,10 +209,10 @@
 <section class="slide">
 <div class="module-label">模块三｜物业管理</div>
 <div class="slide-page-number">26 / 30</div>
-<h1>4.3 预期成效：从人工催办到系统流转</h1>
+<h1>4.3 预期成效-闭环留痕预警</h1>
 <p class="subtitle">通过工单闭环、巡检留痕和设备预警，减少人工协调和被动响应。</p>
 <div class="slide-body">
-<table class="effect-table">
+<table class="effect-table standard-effect-table">
 <thead>
 <tr>
 <th>指标</th>
@@ -242,9 +242,9 @@
 </tr>
 <tr>
 <td>报修工作量</td>
-<td>全年报修约 3000 余次，电话微信跟踪催促压力大</td>
-<td>工单统一入口，按楼宇、故障类型和处理状态统计</td>
-<td>支撑高频问题分析，减少堆积和反复催促</td>
+<td>全年约 3000 余次，催促压力大</td>
+<td>统一入口，按楼宇、类型、状态统计</td>
+<td>减少堆积和反复催促</td>
 </tr>
 <tr>
 <td>历史追溯</td>
@@ -262,7 +262,7 @@
 <section class="slide long-scroll">
 <div class="module-label">模块三｜物业管理</div>
 <div class="slide-page-number">27 / 30</div>
-<h1>4.4 场景演示：报修工单全流程闭环</h1>
+<h1>4.4 报修工单场景演示</h1>
 <div class="slide-body"><div class="figma-scene"><div class="scene-intro">
 <p>以一条日常维修报修为例，展示从移动端发起报修，到工程部接单、处理、办结的完整工单闭环。</p>
 <div class="red-callout">解决“派单无记录、进度看不见、结果无存档”的问题。</div>
@@ -664,6 +664,7 @@
 <div class="progress-bar" id="progressBar"></div>
 </div>
 </div><!-- /app -->
+<script src="data/report-content.js"></script>
 <script>
 (function () {
   'use strict';
@@ -677,6 +678,10 @@
   "prevPage": "module2.html"
 };
 
+  if (window.applyReportContent) {
+    window.applyReportContent(PAGE_CONFIG.currentPage);
+  }
+
   const slides    = Array.from(document.querySelectorAll('.slide-container'));
   const notesAll  = Array.from(document.querySelectorAll('.notes-content'));
   const counter   = document.getElementById('counter');
@@ -685,7 +690,10 @@
   const navTrigger = document.getElementById('navTrigger');
   const sidebar    = document.getElementById('sidebar');
   const stage      = document.getElementById('stage');
+  const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+  const toggleNotesBtn = document.getElementById('toggleNotesBtn');
   let current = 0;
+  let navigatingWithFullscreen = false;
   const total = slides.length;
   const SLIDE_W = 1080;
   const SLIDE_H = 607.5;
@@ -709,7 +717,9 @@
   }
 
   function navigateTo(url) {
-    setFullscreenPreference(isFullscreenView());
+    const shouldPreserveFullscreen = isFullscreenView();
+    navigatingWithFullscreen = shouldPreserveFullscreen;
+    setFullscreenPreference(shouldPreserveFullscreen);
     window.location.href = url;
   }
 
@@ -717,6 +727,22 @@
     if (sessionStorage.getItem(FULLSCREEN_STATE_KEY) === '1') {
       document.body.classList.add('fullscreen-active');
     }
+  }
+
+  function syncPanelButtons() {
+    if (toggleSidebarBtn) {
+      toggleSidebarBtn.classList.toggle('active', !document.body.classList.contains('sidebar-hidden'));
+    }
+    if (toggleNotesBtn) {
+      toggleNotesBtn.classList.toggle('active', !document.body.classList.contains('notes-hidden'));
+    }
+  }
+
+  function togglePanel(className) {
+    document.body.classList.toggle(className);
+    document.body.classList.remove('nav-open');
+    syncPanelButtons();
+    requestAnimationFrame(resizeSlides);
   }
 
   /* ─── 全局等比缩放计算器（窗口与全屏统一） ─── */
@@ -863,6 +889,13 @@
     });
   });
 
+  if (toggleSidebarBtn) {
+    toggleSidebarBtn.addEventListener('click', () => togglePanel('sidebar-hidden'));
+  }
+  if (toggleNotesBtn) {
+    toggleNotesBtn.addEventListener('click', () => togglePanel('notes-hidden'));
+  }
+
   /* ─── 全屏 ─── */
   document.getElementById('fullBtn').addEventListener('click', async () => {
     if (document.fullscreenElement || document.body.classList.contains('fullscreen-active')) {
@@ -883,6 +916,10 @@
 
   function syncFullscreen() {
     const isFs = !!document.fullscreenElement;
+    if (!isFs && navigatingWithFullscreen) {
+      setFullscreenPreference(true);
+      return;
+    }
     document.body.classList.toggle('fullscreen-active', isFs);
     setFullscreenPreference(isFs);
     document.body.classList.remove('nav-open');
@@ -938,6 +975,7 @@
   window.showSlide = showSlide;
   window.navigateTo = navigateTo;
   restoreFullscreenPreference();
+  syncPanelButtons();
   
   const initHash = window.location.hash;
   if (initHash === '#last') {

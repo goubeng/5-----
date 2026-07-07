@@ -203,6 +203,9 @@ function buildModule2(pages, speech) {
     ops.push(text(`[data-slide="9"] .value-chip:nth-child(${item})`, pages['3-9']?.fields[`价值标签 ${item}`]));
   });
   pages['3-4']?.steps.forEach((step, index) => ops.push(sceneLine(`[data-slide="4"] .scene-line:nth-of-type(${index + 1})`, step)));
+  pages['3-7']?.effects.forEach((effect, index) => {
+    ops.push(row(`[data-slide="7"] .effect-table tbody tr:nth-child(${index + 1})`, [effect['指标'], effect['原有方式'], effect['系统建设后'], effect['预期变化']]));
+  });
   pages['3-8']?.steps.forEach((step, index) => ops.push(sceneLine(`[data-slide="8"] .scene-line:nth-of-type(${index + 1})`, step)));
   return attachSpeech(ops, speech);
 }

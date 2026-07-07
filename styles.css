@@ -245,7 +245,7 @@ html, body {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
   padding: 0 20px;
   border-bottom: 1px solid var(--gold-border);
@@ -259,6 +259,7 @@ html, body {
   color: var(--gold);
   min-width: 72px;
   text-align: center;
+  margin-left: auto;
 }
 
 .btn {
@@ -274,6 +275,12 @@ html, body {
 }
 
 .btn:hover {
+  background: rgba(249,215,149,0.15);
+  border-color: var(--gold-border-strong);
+  color: var(--gold);
+}
+
+.btn.active {
   background: rgba(249,215,149,0.15);
   border-color: var(--gold-border-strong);
   color: var(--gold);
@@ -395,11 +402,11 @@ html, body {
 
 /* ─── 幻灯片标题 ─── */
 .slide h1 {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--gold);
   line-height: 1.25;
-  max-width: 860px;
+  max-width: 940px;
   letter-spacing: -0.2px;
 }
 
@@ -576,48 +583,197 @@ html, body {
   line-height: 1.8;
 }
 
-/* ─── 预期成效表格 ─── */
+/* ─── 预期成效数字卡片 ─── */
 .effect-table {
+  display: block;
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--gold-border);
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
 }
 
-.effect-table th {
-  background: rgba(249,215,149,0.10);
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 15px;
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid var(--gold-border);
+.effect-table thead {
+  display: none;
+}
+
+.effect-table tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  counter-reset: effect-card;
+}
+
+.effect-table tr {
+  position: relative;
+  display: flex;
+  min-height: 132px;
+  flex-direction: column;
+  padding: 15px 15px 14px;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.035);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), background var(--duration) var(--ease);
+  counter-increment: effect-card;
+}
+
+.effect-table tr::before {
+  content: counter(effect-card, decimal-leading-zero);
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--tag-solid-bg);
+  color: var(--tag-solid-text);
+  border: 1px solid var(--tag-solid-border);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.effect-table tr:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-border-strong);
+  background: rgba(249,215,149,0.055);
 }
 
 .effect-table td {
-  font-size: 14px;
-  padding: 11px 15px;
+  display: block;
+  padding: 0;
+  border: none !important;
   color: var(--text-secondary);
+  font-size: 12.5px;
   line-height: 1.55;
-  border-bottom: 1px solid rgba(249,215,149,0.08);
 }
-
-.effect-table tr:last-child td { border-bottom: none; }
 
 .effect-table td:first-child {
-  font-weight: 700;
+  min-height: 36px;
+  margin-bottom: 10px;
+  padding-left: 44px;
+  color: var(--gold);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.effect-table td:nth-child(n+2) {
+  margin-top: 6px;
+}
+
+.effect-table td:nth-child(n+2)::before {
+  display: inline-block;
+  min-width: 46px;
+  margin-right: 6px;
   color: var(--gold-dim);
+  font-size: 11px;
+  font-weight: 800;
 }
 
-.effect-table th:not(:last-child),
-.effect-table td:not(:last-child) {
-  border-right: 1px solid rgba(249,215,149,0.08);
+.effect-table tr:has(td:nth-child(4)) td:nth-child(2)::before { content: "现状"; }
+.effect-table tr:has(td:nth-child(4)) td:nth-child(3)::before { content: "建设后"; }
+.effect-table tr:has(td:nth-child(4)) td:nth-child(4)::before { content: "变化"; }
+.effect-table tr:not(:has(td:nth-child(4))) td:nth-child(2)::before { content: "建设后"; }
+.effect-table tr:not(:has(td:nth-child(4))) td:nth-child(3)::before { content: "说明"; }
+
+.standard-effect-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.025);
 }
 
-.effect-table tbody tr { background: rgba(255,255,255,0.02); transition: background 0.15s; }
-.effect-table tbody tr:hover { background: rgba(249,215,149,0.04); }
+.standard-effect-table thead {
+  display: table-header-group;
+}
+
+.standard-effect-table tbody {
+  display: table-row-group;
+  counter-reset: none;
+}
+
+.standard-effect-table tr {
+  display: table-row;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  counter-increment: none;
+}
+
+.standard-effect-table tr::before {
+  display: none;
+}
+
+.standard-effect-table tr:hover {
+  transform: none;
+  background: rgba(249,215,149,0.035);
+}
+
+.standard-effect-table th,
+.standard-effect-table td,
+.standard-effect-table td:first-child {
+  display: table-cell;
+  min-height: 0;
+  margin: 0;
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(249,215,149,0.12) !important;
+  border-right: 1px solid rgba(249,215,149,0.10) !important;
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.34;
+  vertical-align: top;
+}
+
+.standard-effect-table th {
+  color: var(--gold);
+  font-weight: 800;
+  background: rgba(249,215,149,0.08);
+  white-space: nowrap;
+}
+
+.standard-effect-table td:first-child {
+  color: var(--text-primary);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.standard-effect-table td:nth-child(n+2) {
+  margin-top: 0;
+}
+
+.standard-effect-table td:nth-child(n+2)::before {
+  display: none !important;
+}
+
+.standard-effect-table th:last-child,
+.standard-effect-table td:last-child {
+  border-right: none !important;
+}
+
+.standard-effect-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.slide-container[data-slide="7"] .slide-body {
+  margin-top: 20px;
+}
+
+.slide-container[data-slide="7"] .summary-box {
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+}
 
 /* ─── 建设价值 ─── */
 .value-grid {
@@ -816,6 +972,25 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   align-items: start;
+}
+
+.model4-image-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.model4-image-grid {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+.model4-image-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.model4-image-grid.four-up {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .shot-card.mobile .img-placeholder { min-height: 280px; }
@@ -1333,6 +1508,8 @@ html, body {
   .module-grid, .pain-grid { grid-template-columns: 1fr 1fr; }
   .two-column { grid-template-columns: 1fr; }
   .mobile-shot-grid { grid-template-columns: 1fr; }
+  .model4-image-grid.three-up,
+  .model4-image-grid.four-up { grid-template-columns: 1fr; }
 }
 
 /* ─── 打印 ─── */
@@ -1607,5 +1784,87 @@ html, body {
 
 /* ─── V9：去掉 1-1 总体建设思路中的 Emoji 图标 ─── */
 .slide-container[data-slide="1"] .brief-card-label .text-icon {
+  display: none !important;
+}
+
+
+
+/* ─── V10：3.8 公产房场景演示按 Figma 长页卡片布局修复 ─── */
+.estate-scene {
+  gap: 34px;
+}
+
+.estate-stage-card {
+  gap: 26px;
+  padding: 34px 42px;
+}
+
+.estate-stage-card .scene-block {
+  gap: 22px;
+}
+
+.estate-stage-card .scene-line {
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.estate-stage-card .scene-line b {
+  color: var(--text-primary);
+}
+
+.estate-image-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.estate-image-grid.single-column {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none !important;
+}
+
+.estate-image-grid .shot-card {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .estate-image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    align-items: start;
+  }
+}
+
+.estate-image-grid.single-column {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;
+  align-items: stretch !important;
+}
+
+/* 公产房场景图片：真实图 100% 宽度，高度按原图比例自动撑开 */
+.estate-stage-card .img-placeholder.has-image {
+  width: 100%;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: block !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.estate-stage-card .img-placeholder .actual-shot {
+  position: static !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+}
+
+/* 不显示图片编号标签 */
+.estate-stage-card .img-placeholder-tag {
   display: none !important;
 }
