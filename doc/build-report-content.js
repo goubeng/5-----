@@ -245,6 +245,7 @@ function buildStandardModule(pages, speech, config) {
     text('[data-slide="2"] .summary-box', pages[config.solution]?.fields['页面总结']),
     text('[data-slide="3"] h1', pages[config.effects]?.fields['页面标题']),
     text('[data-slide="3"] .subtitle', pages[config.effects]?.fields['页面副标题']),
+    text('[data-slide="3"] .summary-box', pages[config.effects]?.fields['页面总结']),
     text('[data-slide="' + (config.scenes[0]?.slide || 4) + '"] h1', pages[config.scenes[0]?.page]?.fields['页面标题']),
     text('[data-slide="' + (config.scenes[0]?.slide || 4) + '"] .scene-intro p', pages[config.scenes[0]?.page]?.fields['场景说明']),
     text('[data-slide="' + (config.scenes[0]?.slide || 4) + '"] .red-callout', pages[config.scenes[0]?.page]?.fields['场景问题']),
