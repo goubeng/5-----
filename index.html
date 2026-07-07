@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JB部机关室信息化系统建设汇报</title>
+<meta content="JB部机关室信息化系统建设情况汇报，包含总体介绍、办公用品及耗材管理、办公用房及公产房管理、物业管理、公用会场预定管理。" name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="app" id="app">
+<!-- 全屏时左侧悬停触发区 -->
+<div class="nav-trigger" id="navTrigger" title="悬停显示目录"></div>
+<!-- ═══ 左侧导航栏 ═══ -->
+<aside class="sidebar" id="sidebar">
+<div class="brand">
+<div class="eyebrow">信息化系统建设</div>
+<h2>后勤保障统一管理</h2>
+</div>
+<nav class="toc" id="toc">
+<!-- 组1：总体介绍 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>总体介绍</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="index.html" data-slide="0"><span>1-0</span>建设汇报开场</button>
+<button class="toc-item" data-page="index.html" data-slide="1"><span>1-1</span>总体建设思路</button>
+<button class="toc-item" data-page="index.html" data-slide="2"><span>1-2</span>建设背景</button>
+<button class="toc-item" data-page="index.html" data-slide="3"><span>1-3</span>建设目标</button>
+<button class="toc-item" data-page="index.html" data-slide="4"><span>1-4</span>建设内容</button>
+<button class="toc-item" data-page="index.html" data-slide="5"><span>1-5</span>建设思路</button>
+</div>
+</div>
+<!-- 组2：模块一 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块一：办公用品与耗材</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module1.html" data-slide="0"><span>2-0</span>办公用品及耗材管理</button>
+<button class="toc-item" data-page="module1.html" data-slide="1"><span>2-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module1.html" data-slide="2"><span>2-2</span>前置测算 + 执行闭环</button>
+<button class="toc-item" data-page="module1.html" data-slide="3"><span>2-3</span>成效：人工到管控</button>
+<button class="toc-item" data-page="module1.html" data-slide="4"><span>2-4</span>场景演示：执行闭环</button>
+<button class="toc-item" data-page="module1.html" data-slide="5"><span>2-5</span>模块建设价值</button>
+</div>
+</div>
+<!-- 组3：模块二 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块二：办公与公产用房</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module2.html" data-slide="0"><span>3-0</span>办公用房及公产房管理</button>
+<button class="toc-item" data-page="module2.html" data-slide="1"><span>3-1</span>办公用房现状与难点</button>
+<button class="toc-item" data-page="module2.html" data-slide="2"><span>3-2</span>办公用房建设方案</button>
+<button class="toc-item" data-page="module2.html" data-slide="3"><span>3-3</span>办公用房预期成效</button>
+<button class="toc-item" data-page="module2.html" data-slide="4"><span>3-4</span>办公用房场景演示</button>
+<button class="toc-item" data-page="module2.html" data-slide="5"><span>3-5</span>公产房现状与难点</button>
+<button class="toc-item" data-page="module2.html" data-slide="6"><span>3-6</span>公产房建设方案</button>
+<button class="toc-item" data-page="module2.html" data-slide="7"><span>3-7</span>公产房预期成效</button>
+<button class="toc-item" data-page="module2.html" data-slide="8"><span>3-8</span>公产房场景演示</button>
+<button class="toc-item" data-page="module2.html" data-slide="9"><span>3-9</span>模块建设价值</button>
+</div>
+</div>
+<!-- 组4：模块三 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块三：物业管理</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module3.html" data-slide="0"><span>4-0</span>物业管理</button>
+<button class="toc-item" data-page="module3.html" data-slide="1"><span>4-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module3.html" data-slide="2"><span>4-2</span>建设方案</button>
+<button class="toc-item" data-page="module3.html" data-slide="3"><span>4-3</span>预期成效</button>
+<button class="toc-item" data-page="module3.html" data-slide="4"><span>4-4</span>场景演示：报修工单</button>
+<button class="toc-item" data-page="module3.html" data-slide="5"><span>4-5</span>场景演示：日常巡检</button>
+<button class="toc-item" data-page="module3.html" data-slide="6"><span>4-6</span>建设价值</button>
+</div>
+</div>
+<!-- 组5：模块四 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块四：公用会场预定</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module4.html" data-slide="0"><span>5-0</span>会场预定管理</button>
+<button class="toc-item" data-page="module4.html" data-slide="1"><span>5-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module4.html" data-slide="2"><span>5-2</span>建设方案</button>
+<button class="toc-item" data-page="module4.html" data-slide="3"><span>5-3</span>预期成效</button>
+<button class="toc-item" data-page="module4.html" data-slide="4"><span>5-4</span>会议预定全生命周期</button>
+<button class="toc-item" data-page="module4.html" data-slide="5"><span>5-5</span>建设价值</button>
+</div>
+</div>
+</nav>
+<div class="sidebar-footer">
+      键盘 ← / → 翻页<br/>
+      F 全屏  ·  Esc 退出<br/>
+      侧边栏支持折叠/展开
+    </div>
+</aside>
+<!-- ═══ 主区域 ═══ -->
+<div class="main-wrapper">
+<!-- 工具栏 -->
+<div class="toolbar">
+<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;">☰ 目录</button>
+<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;">💬 演讲词</button>
+<div class="counter" id="counter">1 / 22</div>
+<button class="btn" id="fullBtn">⛶ 全屏</button>
+</div>
+<!-- 内容行：幻灯片舞台 + 演讲词面板 -->
+<div class="content-area">
+<!-- ─── 幻灯片舞台 ─── -->
+<div class="stage" id="stage">
+<button aria-label="上一页" class="edge-nav edge-prev" id="prevBtn">‹</button>
+<button aria-label="下一页" class="edge-nav edge-next" id="nextBtn">›</button>
+<!-- Slide 0: 总体介绍主封面 -->
+<div class="slide-container active" data-slide="0">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">1 / 22</div>
+<div class="cover-layout-figma" style="display: flex; height: 100%; align-items: center; justify-content: center; padding: 10px 0;">
+<div style="width: 100%; max-width: 880px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+<h1 class="cover-title-figma" style="font-size: 64px; font-weight: 600; color: var(--text-primary); line-height: 1.25; margin: 0; text-align: left;">JB部机关室信息化系统建设情况汇报</h1><p class="subtitle">聚焦机关后勤保障场景，推动资源统一、流程规范、过程留痕、协同高效</p>
+<p class="cover-subtitle-figma" style="font-size: 26px; font-weight: 600; color: var(--gold); margin: 20px 0 36px; text-align: left; line-height: 1.4;">聚焦机关后勤保障场景，推动资源统一、流程规范、过程留痕、协同高效</p>
+<div class="module-grid-figma" style="display: flex; flex-wrap: wrap; gap: 14px; width: 100%;">
+<button onclick="navigateTo('module1.html')" style="cursor: pointer; border: 1.5px solid var(--gold-border-strong); border-radius: 999px; background: rgba(249,215,149,0.08); color: var(--gold); padding: 12px 24px; font-size: 18px; font-weight: 700; line-height: 1.3; font-family: 'Noto Sans SC', sans-serif; transition: all 0.2s;" type="button">办公用品及耗材管理</button>
+<button onclick="navigateTo('module2.html')" style="cursor: pointer; border: 1.5px solid var(--gold-border-strong); border-radius: 999px; background: rgba(249,215,149,0.08); color: var(--gold); padding: 12px 24px; font-size: 18px; font-weight: 700; line-height: 1.3; font-family: 'Noto Sans SC', sans-serif; transition: all 0.2s;" type="button">办公用房及公产房管理</button>
+<button onclick="navigateTo('module3.html')" style="cursor: pointer; border: 1.5px solid var(--gold-border-strong); border-radius: 999px; background: rgba(249,215,149,0.08); color: var(--gold); padding: 12px 24px; font-size: 18px; font-weight: 700; line-height: 1.3; font-family: 'Noto Sans SC', sans-serif; transition: all 0.2s;" type="button">物业管理</button>
+<button onclick="navigateTo('module4.html')" style="cursor: pointer; border: 1.5px solid var(--gold-border-strong); border-radius: 999px; background: rgba(249,215,149,0.08); color: var(--gold); padding: 12px 24px; font-size: 18px; font-weight: 700; line-height: 1.3; font-family: 'Noto Sans SC', sans-serif; transition: all 0.2s;" type="button">公用会场预定管理</button>
+</div>
+</div>
+</div>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>模块标签 1</td><td>办公用品及耗材管理</td></tr><tr><td>模块标签 2</td><td>办公用房及公产房管理</td></tr><tr><td>模块标签 3</td><td>物业管理</td></tr><tr><td>模块标签 4</td><td>公用会场预定管理</td></tr></tbody>
+</table>
+</section>
+</div></div></section>
+</div>
+<!-- Slide 1: 1.1 总体建设思路 -->
+<div class="slide-container" data-slide="1">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">2 / 22</div>
+<h1>1.1 总体建设思路：一套平台统筹机关后勤保障事项</h1>
+<p class="subtitle">围绕机关后勤保障工作，建设一套平台，覆盖五类保障事项，落地四个业务模块，推进“五化一底线”建设。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">总体建设思路说明表</h3>
+<table class="md-sync-table">
+<thead><tr><th>结构项</th><th>标题</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>结构 1</td><td>一套平台</td><td>建设机关后勤综合管理平台，统一承载机关大院日常保障业务办理、协同和统计分析</td></tr><tr><td>结构 2</td><td>五类保障</td><td>物资保障、用房保障、物业运维、会议服务、现场巡检</td></tr><tr><td>结构 3</td><td>四大模块</td><td>办公用品及耗材管理、办公用房及公产房管理、物业管理、公用会场预定管理。</td></tr><tr><td>结构 4</td><td>五化一底线</td><td>流程线上化、数据统一化、过程留痕化、协作高效化、管理精细化，守住数据安全可控底线</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 2: 1.2 建设背景 -->
+<div class="slide-container" data-slide="2">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">3 / 22</div>
+<h1>1.2 建设背景：分散管理方式制约保障效率提升 （五大难点）</h1>
+<p class="subtitle">机关后勤保障工作覆盖多个领域，过去较多依赖线下表格、电话沟通、微信群流转和人工统计，容易出现数据分散、过程不透明、后续难追溯等问题。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设背景难点表</h3>
+<table class="md-sync-table">
+<thead><tr><th>难点编号</th><th>难点标题</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>难点 1</td><td>用房难统</td><td>楼栋、楼层、房间、面积和状态口径不一</td></tr><tr><td>难点 2</td><td>办公物资难控</td><td>需求、单价、额度、配送和统计依赖人工核对</td></tr><tr><td>难点 3</td><td>会议难约</td><td>会场可用性、会议条件和保障需求需要反复确认</td></tr><tr><td>难点 4</td><td>报修难追</td><td>报修、处理、耗材、评价难以形成闭环</td></tr><tr><td>难点 5</td><td>巡检难溯</td><td>标准、任务、异常、照片缺少集中留痕</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设背景难点表</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面总结</td><td>从“线下分散、人工核对”转向“资源可查、物资可控、会议可约、维修可追、巡检可溯”</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 3: 1.3 五化一底线目标 -->
+<div class="slide-container" data-slide="3">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">4 / 22</div>
+<h1>1.3 建设目标：以“五化一底线”提升后勤保障管理能力</h1>
+<p class="subtitle">围绕机关后勤五类保障场景，构建统一规划、分模块落地、全过程可管、数据安全可控的机关后勤综合管理平台。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设目标说明表</h3>
+<table class="md-sync-table">
+<thead><tr><th>目标编号</th><th>目标标题</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>目标 1</td><td>业务办理线上化</td><td>申请、审批、执行、归档线上流转，减少纸质表格和线下沟通</td></tr><tr><td>目标 2</td><td>基础数据统一化</td><td>用房台账、年度额度、会场资源、设备档案统一维护、统一口径</td></tr><tr><td>目标 3</td><td>过程管理留痕化</td><td>每次申请、审批、配送、维修、巡检和保障服务均形成记录，追溯有据可查</td></tr><tr><td>目标 4</td><td>协同处置高效化</td><td>经办人、审批人、供应商、保障人员和管理部门线上协同，消息自动触达</td></tr><tr><td>目标 5</td><td>管理决策精细化</td><td>额度校验、超时提醒、维保提醒、规则校验自动触发，从事后核对转向事前管控</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设目标说明表</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>底线标题</td><td>安全可控一底线</td></tr><tr><td>底线内容</td><td>核心业务数据内网留存，外侧仅展示执行所需最小化信息，保障业务协同和数据安全。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 4: 1.4 四大建设内容 -->
+<div class="slide-container" data-slide="4">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">5 / 22</div>
+<h1>1.4 建设内容：四个业务模块支撑后勤保障数字化管理</h1>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设内容模块表</h3>
+<table class="md-sync-table">
+<thead><tr><th>模块编号</th><th>模块名称</th><th>解决场景</th><th>管理重点</th></tr></thead>
+<tbody><tr><td>模块 1</td><td>办公用品及耗材管理</td><td>解决“办公用品物资供应保障”场景</td><td>管好物资需求、额度、申领、配送和统计</td></tr><tr><td>模块 2</td><td>办公用房及公产房管理</td><td>解决“房产资源管理”场景</td><td>管清房产台账、公房入住、费用和退房</td></tr><tr><td>模块 3</td><td>物业管理</td><td>解决“物业运维保障”场景</td><td>管住报修工单、巡检任务、设备维保</td></tr><tr><td>模块 4</td><td>公用会场预定管理</td><td>解决“会议服务保障”场景</td><td>管顺会场查询、预定确认、保障归档</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设内容模块表</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面总结</td><td>四个模块分域建设、协同联动，共同支撑机关后勤保障“一套平台、统一管理、数据赋能”</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 5: 1.5 系统部署与联动 -->
+<div class="slide-container" data-slide="5">
+<section class="slide long-scroll">
+<div class="module-label">总体介绍</div>
+<div class="slide-page-number">6 / 22</div>
+<h1>1.5 建设思路：内网集中管理，外侧协同执行，系统按需联动</h1>
+<p class="subtitle">内网集中管控，外侧协同执行，最小化信息展示，执行结果闭环回传。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">建设思路说明表</h3>
+<table class="md-sync-table">
+<thead><tr><th>结构项</th><th>标题</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>结构 1</td><td>内网侧：核心数据集中管理</td><td>承载审批流转、台账管理、额度费用、统计分析等核心业务数据。</td></tr><tr><td>结构 2</td><td>脱敏任务推送</td><td>脱敏任务推送</td></tr><tr><td>结构 3</td><td>执行结果回传</td><td>执行结果回传</td></tr><tr><td>结构 4</td><td>外侧 / 移动端：执行任务协同办理</td><td>支撑报修提交、现场作业、供应商配送、会议保障等执行类任务。</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">系统联动说明</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>联动标题</td><td>系统联动：财务、国资、数据中台协同闭环</td></tr><tr><td>联动内容</td><td>围绕额度占用、费用扣缴、资产管理、组织数据共享等逐步联动。</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">系统联动说明</h3>
+<table class="md-sync-table">
+<thead><tr><th>结构项</th><th>当前内容</th></tr></thead>
+<tbody><tr><td>汇报主题</td><td>JB部机关室信息化系统建设情况汇报</td></tr><tr><td>总体定位</td><td>聚焦机关后勤保障场景，推动资源统一、流程规范、过程留痕、协同高效</td></tr><tr><td>总体建设思路</td><td>一套平台、五类保障、四大模块、五化一底线</td></tr><tr><td>建设背景</td><td>分散管理方式制约保障效率提升，存在用房难统、办公物资难控、会议难约、报修难追、巡检难溯五大难点</td></tr><tr><td>建设目标</td><td>业务办理线上化、基础数据统一化、过程管理留痕化、协同处置高效化、管理决策精细化、安全可控一底线</td></tr><tr><td>建设内容</td><td>办公用品及耗材管理、办公用房及公产房管理、物业管理、公用会场预定管理</td></tr><tr><td>建设思路</td><td>内网集中管理，外侧协同执行，系统按需联动</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- ==================================================================
+             【模块一：办公用品与耗材】 SLIDES (6-11)
+             ================================================================== -->
+</div><!-- /stage -->
+<aside class="speaker-notes" id="speakerNotes">
+<div class="notes-header">
+<svg class="notes-header-svg" viewbox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg>
+<span class="notes-header-title">演讲词</span>
+</div>
+<div class="notes-body" id="notesBody">
+<!-- notes 0 -->
+<div class="notes-content active" data-notes="0"><div class="notes-label">JB部机关室信息化系统建设情况汇报</div><p class="notes-para">聚焦机关后勤保障场景，推动资源统一、流程规范、过程留痕、协同高效</p><p class="notes-para">模块标签 1：办公用品及耗材管理</p><p class="notes-para">模块标签 2：办公用房及公产房管理</p><p class="notes-para">模块标签 3：物业管理</p><p class="notes-para">模块标签 4：公用会场预定管理</p></div>
+<!-- notes 1 -->
+<div class="notes-content" data-notes="1"><div class="notes-label">1.1 总体建设思路：一套平台统筹机关后勤保障事项</div><p class="notes-para">围绕机关后勤保障工作，建设一套平台，覆盖五类保障事项，落地四个业务模块，推进“五化一底线”建设。</p><p class="notes-para">结构项：结构 1；标题：一套平台；文案内容：建设机关后勤综合管理平台，统一承载机关大院日常保障业务办理、协同和统计分析</p><p class="notes-para">结构项：结构 2；标题：五类保障；文案内容：物资保障、用房保障、物业运维、会议服务、现场巡检</p><p class="notes-para">结构项：结构 3；标题：四大模块；文案内容：办公用品及耗材管理、办公用房及公产房管理、物业管理、公用会场预定管理。</p><p class="notes-para">结构项：结构 4；标题：五化一底线；文案内容：流程线上化、数据统一化、过程留痕化、协作高效化、管理精细化，守住数据安全可控底线</p></div>
+<!-- notes 2 -->
+<div class="notes-content" data-notes="2"><div class="notes-label">1.2 建设背景：分散管理方式制约保障效率提升 （五大难点）</div><p class="notes-para">机关后勤保障工作覆盖多个领域，过去较多依赖线下表格、电话沟通、微信群流转和人工统计，容易出现数据分散、过程不透明、后续难追溯等问题。</p><p class="notes-para">难点编号：难点 1；难点标题：用房难统；文案内容：楼栋、楼层、房间、面积和状态口径不一</p><p class="notes-para">难点编号：难点 2；难点标题：办公物资难控；文案内容：需求、单价、额度、配送和统计依赖人工核对</p><p class="notes-para">难点编号：难点 3；难点标题：会议难约；文案内容：会场可用性、会议条件和保障需求需要反复确认</p><p class="notes-para">难点编号：难点 4；难点标题：报修难追；文案内容：报修、处理、耗材、评价难以形成闭环</p><p class="notes-para">难点编号：难点 5；难点标题：巡检难溯；文案内容：标准、任务、异常、照片缺少集中留痕</p><p class="notes-para">页面总结：从“线下分散、人工核对”转向“资源可查、物资可控、会议可约、维修可追、巡检可溯”</p></div>
+<!-- notes 3 -->
+<div class="notes-content" data-notes="3"><div class="notes-label">1.3 建设目标：以“五化一底线”提升后勤保障管理能力</div><p class="notes-para">围绕机关后勤五类保障场景，构建统一规划、分模块落地、全过程可管、数据安全可控的机关后勤综合管理平台。</p><p class="notes-para">目标编号：目标 1；目标标题：业务办理线上化；文案内容：申请、审批、执行、归档线上流转，减少纸质表格和线下沟通</p><p class="notes-para">目标编号：目标 2；目标标题：基础数据统一化；文案内容：用房台账、年度额度、会场资源、设备档案统一维护、统一口径</p><p class="notes-para">目标编号：目标 3；目标标题：过程管理留痕化；文案内容：每次申请、审批、配送、维修、巡检和保障服务均形成记录，追溯有据可查</p><p class="notes-para">目标编号：目标 4；目标标题：协同处置高效化；文案内容：经办人、审批人、供应商、保障人员和管理部门线上协同，消息自动触达</p><p class="notes-para">目标编号：目标 5；目标标题：管理决策精细化；文案内容：额度校验、超时提醒、维保提醒、规则校验自动触发，从事后核对转向事前管控</p><p class="notes-para">底线标题：安全可控一底线</p><p class="notes-para">底线内容：核心业务数据内网留存，外侧仅展示执行所需最小化信息，保障业务协同和数据安全。</p></div>
+<!-- notes 4 -->
+<div class="notes-content" data-notes="4"><div class="notes-label">1.4 建设内容：四个业务模块支撑后勤保障数字化管理</div><p class="notes-para">模块编号：模块 1；模块名称：办公用品及耗材管理；解决场景：解决“办公用品物资供应保障”场景；管理重点：管好物资需求、额度、申领、配送和统计</p><p class="notes-para">模块编号：模块 2；模块名称：办公用房及公产房管理；解决场景：解决“房产资源管理”场景；管理重点：管清房产台账、公房入住、费用和退房</p><p class="notes-para">模块编号：模块 3；模块名称：物业管理；解决场景：解决“物业运维保障”场景；管理重点：管住报修工单、巡检任务、设备维保</p><p class="notes-para">模块编号：模块 4；模块名称：公用会场预定管理；解决场景：解决“会议服务保障”场景；管理重点：管顺会场查询、预定确认、保障归档</p><p class="notes-para">页面总结：四个模块分域建设、协同联动，共同支撑机关后勤保障“一套平台、统一管理、数据赋能”</p></div>
+<!-- notes 5 -->
+<div class="notes-content" data-notes="5"><div class="notes-label">1.5 建设思路：内网集中管理，外侧协同执行，系统按需联动</div><p class="notes-para">内网集中管控，外侧协同执行，最小化信息展示，执行结果闭环回传。</p><p class="notes-para">结构项：结构 1；标题：内网侧：核心数据集中管理；文案内容：承载审批流转、台账管理、额度费用、统计分析等核心业务数据。</p><p class="notes-para">结构项：结构 2；标题：脱敏任务推送；文案内容：脱敏任务推送</p><p class="notes-para">结构项：结构 3；标题：执行结果回传；文案内容：执行结果回传</p><p class="notes-para">结构项：结构 4；标题：外侧 / 移动端：执行任务协同办理；文案内容：支撑报修提交、现场作业、供应商配送、会议保障等执行类任务。</p><p class="notes-para">联动标题：系统联动：财务、国资、数据中台协同闭环</p><p class="notes-para">联动内容：围绕额度占用、费用扣缴、资产管理、组织数据共享等逐步联动。</p><p class="notes-para">结构项：汇报主题；当前内容：JB部机关室信息化系统建设情况汇报</p><p class="notes-para">结构项：总体定位；当前内容：聚焦机关后勤保障场景，推动资源统一、流程规范、过程留痕、协同高效</p><p class="notes-para">结构项：总体建设思路；当前内容：一套平台、五类保障、四大模块、五化一底线</p><p class="notes-para">结构项：建设背景；当前内容：分散管理方式制约保障效率提升，存在用房难统、办公物资难控、会议难约、报修难追、巡检难溯五大难点</p><p class="notes-para">结构项：建设目标；当前内容：业务办理线上化、基础数据统一化、过程管理留痕化、协同处置高效化、管理决策精细化、安全可控一底线</p></div>
+</div><!-- /notes-body -->
+</aside>
+</div><!-- /content-area -->
+</div><!-- /main-wrapper -->
+<!-- 进度条 -->
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+</div><!-- /app -->
+<script>
+(function () {
+  'use strict';
+
+  // 页面配置
+  const PAGE_CONFIG = {
+  "currentPage": "index.html",
+  "slideOffset": 0,
+  "totalSlides": 35,
+  "nextPage": "module1.html",
+  "prevPage": null
+};
+
+  const slides    = Array.from(document.querySelectorAll('.slide-container'));
+  const notesAll  = Array.from(document.querySelectorAll('.notes-content'));
+  const counter   = document.getElementById('counter');
+  const bar       = document.getElementById('progressBar');
+  const tocItems  = Array.from(document.querySelectorAll('.toc-item'));
+  const navTrigger = document.getElementById('navTrigger');
+  const sidebar    = document.getElementById('sidebar');
+  const stage      = document.getElementById('stage');
+  let current = 0;
+  const total = slides.length;
+  const SLIDE_W = 1080;
+  const SLIDE_H = 607.5;
+  const MIN_WINDOW_SCALE = 0.95;
+  const FULLSCREEN_STATE_KEY = 'reportFullscreenActive';
+
+  /* ─── 手风琴折叠展开 ─── */
+  window.toggleTocGroup = function(btn) {
+    const list = btn.nextElementSibling;
+    const arrow = btn.querySelector('.toc-arrow');
+    const isCollapsed = list.classList.toggle('collapsed');
+    arrow.textContent = isCollapsed ? '▶' : '▼';
+  };
+
+  function isFullscreenView() {
+    return !!(document.fullscreenElement || document.body.classList.contains('fullscreen-active'));
+  }
+
+  function setFullscreenPreference(enabled) {
+    sessionStorage.setItem(FULLSCREEN_STATE_KEY, enabled ? '1' : '0');
+  }
+
+  function navigateTo(url) {
+    setFullscreenPreference(isFullscreenView());
+    window.location.href = url;
+  }
+
+  function restoreFullscreenPreference() {
+    if (sessionStorage.getItem(FULLSCREEN_STATE_KEY) === '1') {
+      document.body.classList.add('fullscreen-active');
+    }
+  }
+
+  /* ─── 全局等比缩放计算器（窗口与全屏统一） ─── */
+  function resizeSlides() {
+    const activeContainer = document.querySelector('.slide-container.active');
+    if (!activeContainer) return;
+    
+    const slide = activeContainer.querySelector('.slide');
+    if (!slide) return;
+    
+    const containerW = stage.clientWidth;
+    const containerH = stage.clientHeight;
+    
+    const isLong = slide.classList.contains('long-scroll');
+    if (isLong) {
+      // 宽度等比缩放，高度自适应滚动
+      const scale = containerW / SLIDE_W;
+      
+      slide.style.transform = 'none';
+      slide.style.width = `${SLIDE_W}px`;
+      slide.style.height = 'auto';
+      const unscaledH = slide.scrollHeight;
+      
+      slide.style.transform = `scale(${scale})`;
+      slide.style.transformOrigin = 'top left';
+      
+      activeContainer.style.width = `${SLIDE_W * scale}px`;
+      activeContainer.style.height = `${unscaledH * scale}px`;
+      activeContainer.style.aspectRatio = 'auto';
+      activeContainer.style.margin = '20px auto';
+    } else {
+      // 16:9 标准尺寸缩放
+      
+      const isFs = isFullscreenView();
+      let scale = containerW / SLIDE_W;
+      if (isFs) {
+        scale = Math.min(containerW / SLIDE_W, containerH / SLIDE_H);
+      } else {
+        // 默认窗口也按同一画布比例放大，窗口较矮时允许纵向滚动。
+        scale = Math.min(containerW / SLIDE_W, Math.max(MIN_WINDOW_SCALE, containerH / 570));
+      }
+    
+      
+      slide.style.transform = `scale(${scale})`;
+      slide.style.transformOrigin = 'top left';
+      slide.style.width = `${SLIDE_W}px`;
+      slide.style.height = `${SLIDE_H}px`;
+      
+      activeContainer.style.width = `${SLIDE_W * scale}px`;
+      activeContainer.style.height = `${SLIDE_H * scale}px`;
+      activeContainer.style.aspectRatio = 'auto';
+      activeContainer.style.margin = 'auto';
+    }
+  }
+
+  /* ─── 目录高亮逻辑 ─── */
+  function highlightTOC(currentSlideIndex) {
+    tocItems.forEach(item => {
+      const itemPage = item.getAttribute('data-page') || 'index.html';
+      const itemSlide = parseInt(item.getAttribute('data-slide'), 10);
+      const isActive = (itemPage === PAGE_CONFIG.currentPage && itemSlide === currentSlideIndex);
+      item.classList.toggle('active', isActive);
+    });
+  }
+
+  /* ─── 切换幻灯片 ─── */
+  function showSlide(index) {
+    // 边界检测与跨页面跳转
+    if (index >= total) {
+      if (PAGE_CONFIG.nextPage) {
+        navigateTo(`${PAGE_CONFIG.nextPage}#slide0`);
+        return;
+      }
+      index = total - 1;
+    }
+    if (index < 0) {
+      if (PAGE_CONFIG.prevPage) {
+        navigateTo(`${PAGE_CONFIG.prevPage}#last`);
+        return;
+      }
+      index = 0;
+    }
+
+    current = index;
+
+    // 容器切换
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+
+    // 计算当前页缩放
+    resizeSlides();
+
+    // 目录高亮
+    highlightTOC(current);
+
+    // 自动展开激活目录的手风琴
+    const activeItem = document.querySelector(`.toc-item[data-page="${PAGE_CONFIG.currentPage}"][data-slide="${current}"]`);
+    if (activeItem) {
+      const parentList = activeItem.closest('.toc-list');
+      if (parentList) {
+        parentList.classList.remove('collapsed');
+        const parentArrow = parentList.previousElementSibling.querySelector('.toc-arrow');
+        if (parentArrow) parentArrow.textContent = '▼';
+      }
+    }
+
+    // 演讲词切换
+    notesAll.forEach((n, i) => n.classList.toggle('active', i === current));
+
+    // 重置演讲词面板滚动
+    const notesBody = document.getElementById('notesBody');
+    if (notesBody) notesBody.scrollTop = 0;
+
+    // 顶部计数器
+    const absNum = current + 1 + PAGE_CONFIG.slideOffset;
+    counter.textContent = `${absNum} / ${PAGE_CONFIG.totalSlides}`;
+
+    // 幻灯片内页码
+    const pageNumEl = slides[current].querySelector('.slide-page-number');
+    if (pageNumEl) {
+      pageNumEl.textContent = `${absNum} / ${PAGE_CONFIG.totalSlides}`;
+    }
+
+    // 进度条
+    bar.style.width = `${(absNum / PAGE_CONFIG.totalSlides) * 100}%`;
+
+    // 重置当前容器滚动位置
+    slides[current].scrollTop = 0;
+    stage.scrollTop = 0;
+  }
+
+  /* ─── 导航按钮 ─── */
+  document.getElementById('prevBtn').addEventListener('click', () => showSlide(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => showSlide(current + 1));
+
+  tocItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const page = item.getAttribute('data-page');
+      const slideIdx = parseInt(item.getAttribute('data-slide'), 10);
+      if (page === PAGE_CONFIG.currentPage) {
+        showSlide(slideIdx);
+      } else {
+        navigateTo(`${page}#slide${slideIdx}`);
+      }
+    });
+  });
+
+  /* ─── 全屏 ─── */
+  document.getElementById('fullBtn').addEventListener('click', async () => {
+    if (document.fullscreenElement || document.body.classList.contains('fullscreen-active')) {
+      document.body.classList.remove('fullscreen-active');
+      setFullscreenPreference(false);
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      }
+      resizeSlides();
+    } else {
+      await document.documentElement.requestFullscreen().catch(() => {
+        document.body.classList.add('fullscreen-active');
+        setFullscreenPreference(true);
+        resizeSlides();
+      });
+    }
+  });
+
+  function syncFullscreen() {
+    const isFs = !!document.fullscreenElement;
+    document.body.classList.toggle('fullscreen-active', isFs);
+    setFullscreenPreference(isFs);
+    document.body.classList.remove('nav-open');
+    resizeSlides();
+  }
+  document.addEventListener('fullscreenchange', syncFullscreen);
+
+  /* ─── 全屏侧边栏悬停 ─── */
+  if (navTrigger && sidebar) {
+    navTrigger.addEventListener('mouseenter', () => {
+      if (isFullscreenView()) {
+        document.body.classList.add('nav-open');
+      }
+    });
+    sidebar.addEventListener('mouseleave', () => {
+      document.body.classList.remove('nav-open');
+    });
+  }
+
+  /* ─── 监听重置 ─── */
+  window.addEventListener('resize', resizeSlides);
+
+  /* ─── 键盘快捷键 ─── */
+  document.addEventListener('keydown', (e) => {
+    const activeSlide = slides[current].querySelector('.slide');
+    const isLong = activeSlide.classList.contains('long-scroll');
+
+    // 场景演示页：上下键滚动内容
+    if (isLong && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      stage.scrollBy({ top: e.key === 'ArrowDown' ? 200 : -200, behavior: 'smooth' });
+      return;
+    }
+
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') showSlide(current + 1);
+    if (e.key === 'ArrowLeft'  || e.key === 'PageUp')   showSlide(current - 1);
+    if (e.key.toLowerCase() === 'f') document.getElementById('fullBtn').click();
+    if (e.key === 'Escape' && !document.fullscreenElement && document.body.classList.contains('fullscreen-active')) {
+      document.body.classList.remove('fullscreen-active');
+      setFullscreenPreference(false);
+      resizeSlides();
+    }
+  });
+
+  /* ─── 触摸滑动（移动端） ─── */
+  let touchStartX = 0;
+  stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) showSlide(dx < 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  /* ─── 初始化与哈希路由 ─── */
+  window.showSlide = showSlide;
+  window.navigateTo = navigateTo;
+  restoreFullscreenPreference();
+  
+  const initHash = window.location.hash;
+  if (initHash === '#last') {
+    showSlide(total - 1);
+  } else if (initHash && initHash.startsWith('#slide')) {
+    const slideIdx = parseInt(initHash.replace('#slide', ''), 10);
+    showSlide(slideIdx);
+  } else {
+    showSlide(0);
+  }
+})();
+</script>
+</body>
+</html>

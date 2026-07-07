@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JB部机关室信息化系统建设汇报</title>
+<meta content="JB部机关室信息化系统建设汇报，包含总体介绍、办公用品及耗材管理模块、以及办公用房及公产房管理模块。" name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="app" id="app">
+<!-- 全屏时左侧悬停触发区 -->
+<div class="nav-trigger" id="navTrigger" title="悬停显示目录"></div>
+<!-- ═══ 左侧导航栏 ═══ -->
+<aside class="sidebar" id="sidebar">
+<div class="brand">
+<div class="eyebrow">信息化系统建设</div>
+<h2>后勤保障统一管理</h2>
+</div>
+<nav class="toc" id="toc">
+<!-- 组1：总体介绍 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>总体介绍</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="index.html" data-slide="0"><span>1-0</span>建设汇报开场</button>
+<button class="toc-item" data-page="index.html" data-slide="1"><span>1-1</span>总体建设思路</button>
+<button class="toc-item" data-page="index.html" data-slide="2"><span>1-2</span>核心建设背景</button>
+<button class="toc-item" data-page="index.html" data-slide="3"><span>1-3</span>五化一底线目标</button>
+<button class="toc-item" data-page="index.html" data-slide="4"><span>1-4</span>四大建设内容</button>
+<button class="toc-item" data-page="index.html" data-slide="5"><span>1-5</span>系统部署与联动</button>
+</div>
+</div>
+<!-- 组2：模块一 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块一：办公用品与耗材</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module1.html" data-slide="0"><span>2-0</span>办公用品及耗材管理</button>
+<button class="toc-item" data-page="module1.html" data-slide="1"><span>2-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module1.html" data-slide="2"><span>2-2</span>前置测算 + 执行闭环</button>
+<button class="toc-item" data-page="module1.html" data-slide="3"><span>2-3</span>成效：人工到管控</button>
+<button class="toc-item" data-page="module1.html" data-slide="4"><span>2-4</span>场景演示：执行闭环</button>
+<button class="toc-item" data-page="module1.html" data-slide="5"><span>2-5</span>模块建设价值</button>
+</div>
+</div>
+<!-- 组3：模块二 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块二：办公用房及公产房管理</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module2.html" data-slide="0"><span>3-0</span>办公用房及公产房管理</button>
+<button class="toc-item" data-page="module2.html" data-slide="1"><span>3-1</span>办公用房现状与难点</button>
+<button class="toc-item" data-page="module2.html" data-slide="2"><span>3-2</span>办公用房建设方案</button>
+<button class="toc-item" data-page="module2.html" data-slide="3"><span>3-3</span>办公用房预期成效</button>
+<button class="toc-item" data-page="module2.html" data-slide="4"><span>3-4</span>办公用房场景演示</button>
+<button class="toc-item" data-page="module2.html" data-slide="5"><span>3-5</span>公产房现状与难点</button>
+<button class="toc-item" data-page="module2.html" data-slide="6"><span>3-6</span>公产房建设方案</button>
+<button class="toc-item" data-page="module2.html" data-slide="7"><span>3-7</span>公产房预期成效</button>
+<button class="toc-item" data-page="module2.html" data-slide="8"><span>3-8</span>公产房场景演示</button>
+<button class="toc-item" data-page="module2.html" data-slide="9"><span>3-9</span>模块建设价值</button>
+</div>
+</div>
+<!-- 组4：模块三 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块三：物业管理</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module3.html" data-slide="0"><span>4-0</span>物业管理</button>
+<button class="toc-item" data-page="module3.html" data-slide="1"><span>4-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module3.html" data-slide="2"><span>4-2</span>建设方案</button>
+<button class="toc-item" data-page="module3.html" data-slide="3"><span>4-3</span>预期成效</button>
+<button class="toc-item" data-page="module3.html" data-slide="4"><span>4-4</span>场景演示：报修工单</button>
+<button class="toc-item" data-page="module3.html" data-slide="5"><span>4-5</span>场景演示：日常巡检</button>
+<button class="toc-item" data-page="module3.html" data-slide="6"><span>4-6</span>建设价值</button>
+</div>
+</div>
+<!-- 组5：模块四 -->
+<div class="toc-group">
+<button class="toc-header" onclick="toggleTocGroup(this)">
+<span>模块四：公用会场预定</span>
+<span class="toc-arrow">▼</span>
+</button>
+<div class="toc-list">
+<button class="toc-item" data-page="module4.html" data-slide="0"><span>5-0</span>会场预定管理</button>
+<button class="toc-item" data-page="module4.html" data-slide="1"><span>5-1</span>业务现状与难点</button>
+<button class="toc-item" data-page="module4.html" data-slide="2"><span>5-2</span>建设方案</button>
+<button class="toc-item" data-page="module4.html" data-slide="3"><span>5-3</span>预期成效</button>
+<button class="toc-item" data-page="module4.html" data-slide="4"><span>5-4</span>会议预定全生命周期</button>
+<button class="toc-item" data-page="module4.html" data-slide="5"><span>5-5</span>建设价值</button>
+</div>
+</div>
+</nav>
+<div class="sidebar-footer">
+      键盘 ← / → 翻页<br/>
+      F 全屏  ·  Esc 退出<br/>
+      侧边栏支持折叠/展开
+    </div>
+</aside>
+<!-- ═══ 主区域 ═══ -->
+<div class="main-wrapper">
+<!-- 工具栏 -->
+<div class="toolbar">
+<button class="btn" id="toggleSidebarBtn" style="margin-right: auto;">☰ 目录</button>
+<button class="btn" id="toggleNotesBtn" style="margin-right: 10px;">💬 演讲词</button>
+<div class="counter" id="counter">1 / 22</div>
+<button class="btn" id="fullBtn">⛶ 全屏</button>
+</div>
+<!-- 内容行：幻灯片舞台 + 演讲词面板 -->
+<div class="content-area">
+<!-- ─── 幻灯片舞台 ─── -->
+<div class="stage" id="stage">
+<button aria-label="上一页" class="edge-nav edge-prev" id="prevBtn">‹</button>
+<button aria-label="下一页" class="edge-nav edge-next" id="nextBtn">›</button>
+<!-- Slide 12: 3-0 模块二封面 (高亮高亮第二模块) -->
+<div class="slide-container" data-slide="0">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">13 / 22</div>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; padding: 20px 0;">
+<h1 style="font-size: 42px; color: var(--gold); text-align: center; margin: 0 auto;">模块二：办公用房及公产房管理</h1>
+<p class="subtitle" style="margin: 20px auto 20px; text-align: center; max-width: 840px;">统一空间台账，支撑办公用房核查与公产房全流程管理</p>
+<div class="note-box" style="margin: 0 auto 28px; max-width: 900px; text-align: center;">办公用房：楼栋、楼层、房间、面积、状态；公产房：申请、轮候、分配、入住、费用、退房</div>
+<div class="module-grid" style="grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 1000px; margin: 0 auto; gap: 16px;">
+<div class="module-card" onclick="navigateTo('module1.html')" style="cursor: pointer; height: auto; aspect-ratio: 1.4/1; opacity: 0.4;">
+<div class="icon">01</div>
+<div style="font-weight: 700; margin-top: 10px;">办公用品及<br/>耗材管理</div>
+</div>
+<div class="module-card active" style="height: auto; aspect-ratio: 1.4/1;">
+<div class="icon">02</div>
+<div style="font-weight: 700; margin-top: 10px;">办公用房及<br/>公产房管理</div>
+</div>
+<div class="module-card" onclick="navigateTo('module3.html')" style="cursor: pointer; height: auto; aspect-ratio: 1.4/1; opacity: 0.45; transition: opacity 0.2s;">
+<div class="icon">03</div>
+<div style="font-weight: 700; margin-top: 10px;">物业管理</div>
+</div>
+<div class="module-card" onclick="navigateTo('module4.html')" style="cursor: pointer; height: auto; aspect-ratio: 1.4/1; opacity: 0.45; transition: opacity 0.2s;">
+<div class="icon">04</div>
+<div style="font-weight: 700; margin-top: 10px;">公用会场<br/>预定管理</div>
+</div>
+</div>
+</div>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>模块导航 1</td><td>办公用品及耗材管理</td></tr><tr><td>模块导航 2</td><td>办公用房及公产房管理</td></tr><tr><td>模块导航 3</td><td>物业管理</td></tr><tr><td>模块导航 4</td><td>公用会场预定管理</td></tr><tr><td>模块说明</td><td>办公用房：楼栋、楼层、房间、面积、状态；公产房：申请、轮候、分配、入住、费用、退房</td></tr></tbody>
+</table>
+</section>
+</div></div></section>
+</div>
+<!-- Slide 13: 3-1 办公用房现状与难点 -->
+<div class="slide-container" data-slide="1">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">14 / 22</div>
+<h1>3.1 办公用房业务现状：楼宇信息未完整维护、空间底数不清、面积口径不一</h1>
+<p class="subtitle">解决办公用房管理中“底数不清、面积不准、状态不明、统计困难”的问题。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>痛点 1 标题</td><td>楼宇信息未完整维护</td></tr><tr><td>痛点 1 内容</td><td>部分办公楼宇、楼层、房间等基础信息尚未形成完整台账，后续统计缺少统一数据来源</td></tr><tr><td>痛点 2 标题</td><td>空间底数不清</td></tr><tr><td>痛点 2 内容</td><td>办公用房总面积不清楚，各类型用房分别占多少面积缺少统一统计，难以准确掌握资源规模和结构</td></tr><tr><td>痛点 3 标题</td><td>面积口径不一</td></tr><tr><td>痛点 3 内容</td><td>建筑面积、使用面积、房间面积等统计口径容易混用，导致不同汇总结果之间存在差异。</td></tr><tr><td>页面总结</td><td>办公用房管理的核心，是先把面积测准、台账补齐、口径统一、分类看清。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 14: 3-2 办公用房建设方案 -->
+<div class="slide-container" data-slide="2">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">15 / 22</div>
+<h1>3.2 办公用房建设方案：统一测绘 + 统一口径 + 分类统计</h1>
+<p class="subtitle">以实测空间数据为基础，建立楼栋、楼层、房间一体化管理台账，形成空间资源可查、状态可管、面积可统的办公用房管理基础。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>建设内容 1 标题</td><td>统一测绘</td></tr><tr><td>建设内容 1 内容</td><td>通过统一测绘核准楼栋、楼层、房间的面积数据，解决办公用房面积准不准、底数实不实的问题</td></tr><tr><td>建设内容 2 标题</td><td>补齐台账</td></tr><tr><td>建设内容 2 内容</td><td>按楼栋、楼层、房间逐步补齐基础信息，形成统一的办公用房资源台账</td></tr><tr><td>建设内容 3 标题</td><td>统一口径</td></tr><tr><td>建设内容 3 内容</td><td>区分建筑面积、使用面积、房间面积等统计口径，明确面积统计规则，避免数据混用。</td></tr><tr><td>建设内容 4 标题</td><td>分类统计</td></tr><tr><td>建设内容 4 内容</td><td>按楼栋、楼层、用房类型、面积口径等维度形成统计，支撑资源核查和管理分析。</td></tr><tr><td>页面总结</td><td>统一测绘解决“面积准不准”，补齐台账解决“有没有数据”， 统一口径解决“数据能不能对齐”，分类统计解决“结构能不能看清”。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 15: 3-3 办公用房预期成效 -->
+<div class="slide-container" data-slide="3">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">16 / 22</div>
+<h1>3.3 办公用房预期成效：办公空间资源一张账</h1>
+<p class="subtitle">通过统一测绘、台账补齐和分类统计，逐步摸清办公用房总量、面积口径和类型结构。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">办公用房预期成效数据表</h3>
+<table class="md-sync-table">
+<thead><tr><th>指标</th><th>系统建设后</th><th>说明</th></tr></thead>
+<tbody><tr><td>已测绘楼宇数量</td><td>已测绘办公楼宇：XX 栋</td><td>通过统一测绘，摸清办公楼宇基础底数。</td></tr><tr><td>已建账房间数量</td><td>已建账房间：XX 间</td><td>按楼栋、楼层、房间建立空间台账</td></tr><tr><td>办公用房总面积</td><td>核准办公用房总面积：XX ㎡</td><td>以测绘成果为基础，形成统一面积数据。</td></tr><tr><td>各类型用房面积</td><td>已分类用房类型：XX 类</td><td>支持按办公、技术用房、公用用房、附属用房类型统计面积。</td></tr><tr><td>统一面积口径</td><td>统一 3 类面积口径</td><td>建筑面积、使用面积、房间面积分口径统计，避免混用。</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">办公用房预期成效数据表</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面总结</td><td>预期效果：面积数据更准、分类结构更清、统计口径更统一，为资源核查、空间调配和领导查询提供数据依据。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 16: 3-4 办公用房场景演示 -->
+<div class="slide-container" data-slide="4">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">17 / 22</div>
+<h1>3.4 场景演示：办公空间资源查询与核查</h1>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面总结</td><td>通过楼栋、楼层、房间和实测图纸联动， 管理人员可以快速回答“有哪些房、在哪里、谁在用、面积多少、状态如何”。</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">办公用房场景演示流程步骤表</h3>
+<table class="md-sync-table">
+<thead><tr><th>流程步骤</th><th>步骤名称</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>步骤 1</td><td>楼栋档案</td><td>查看楼栋基础信息，掌握建设年份、总建筑面积、楼层数量、楼栋用途和使用状态</td></tr><tr><td>步骤 2</td><td>楼层管理</td><td>按楼栋查看楼层信息，关联实测楼层平面图，直观掌握楼层空间分布、功能区构成和房间位置。</td></tr><tr><td>步骤 3</td><td>房间台账</td><td>查看房间编号、所属楼层、房间类型、建筑面积、使用面积、当前状态和使用单位。</td></tr><tr><td>步骤 4</td><td>统计分析</td><td>按楼栋、房间类型、使用状态和面积进行统计分析，为资源调配、空间利用分析和领导查询提供支撑。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 17: 3-5 公产房现状与难点 -->
+<div class="slide-container" data-slide="5">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">18 / 22</div>
+<h1>3.5 公产房业务现状：从人工台账到动态闭环</h1>
+<p class="subtitle">解决公产房管理中“房源状态不清、申请轮候难管、费用核算耗时、退房释放不及时”的问题。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>痛点 1 标题</td><td>房源状态不够清楚</td></tr><tr><td>痛点 1 内容</td><td>在住、空置、退房等状态依赖人工台账更新</td></tr><tr><td>痛点 2 标题</td><td>入住流转缺少线上记录</td></tr><tr><td>痛点 2 内容</td><td>申请、轮候、分配、入住过程难以完整追溯</td></tr><tr><td>痛点 3 标题</td><td>费用核算耗时</td></tr><tr><td>痛点 3 内容</td><td>房租、物业费清单需要人工计算、核对后提交财务</td></tr><tr><td>页面总结</td><td>公产房管理的重点，不是单纯管房间，而是管房源流转、人员入住和费用账单。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 18: 3-6 公产房建设方案 -->
+<div class="slide-container" data-slide="6">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">19 / 22</div>
+<h1>3.6 公产房建设方案：申请轮候 + 分配入住 + 费用账单 + 退房释放</h1>
+<p class="subtitle">围绕公产房从申请到退房的管理过程，形成房源动态管理和费用核算闭环。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>建设内容 1 标题</td><td>申请轮候</td></tr><tr><td>建设内容 1 内容</td><td>线上申请、审核、评分排序</td></tr><tr><td>建设内容 2 标题</td><td>分配入住</td></tr><tr><td>建设内容 2 内容</td><td>匹配空置房源，形成入住记录</td></tr><tr><td>建设内容 3 标题</td><td>费用账单</td></tr><tr><td>建设内容 3 内容</td><td>按面积、标准、状态生成费用</td></tr><tr><td>建设内容 4 标题</td><td>退房释放</td></tr><tr><td>建设内容 4 内容</td><td>退房后房源恢复可分配</td></tr><tr><td>页面总结</td><td>公产房管理不是单点房源台账，而是从申请、分配、费用到账单、退房释放的闭环管理。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 19: 3-7 公产房预期成效 -->
+<div class="slide-container" data-slide="7">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">20 / 22</div>
+<h1>3.7 公产房预期成效：房源状态与费用核算可视化</h1>
+<p class="subtitle">通过房源、入住状态和费用账单数据沉淀，支撑公产房动态管理和费用核对。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<h3 class="md-sync-heading">公产房预期成效数据表</h3>
+<table class="md-sync-table">
+<thead><tr><th>指标</th><th>系统建设后</th></tr></thead>
+<tbody><tr><td>公产房总套数</td><td>在住、空置、退房等状态动态维护</td></tr><tr><td>在住房源数</td><td>申请记录和轮候评分线上留痕</td></tr><tr><td>空置房源数</td><td>分配结果线上记录，房源状态同步更新</td></tr><tr><td>月度账单数量</td><td>系统按面积、标准和状态生成费用账单</td></tr><tr><td>月度应收金额</td><td>费用清单可导出、可核对、可追溯</td></tr><tr><td>空置房物业费测算金额</td><td>费用清单可导出、可核对、可追溯</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">公产房预期成效数据表</h3>
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面总结</td><td>通过房源状态、入住信息和费用账单统一维护，推动公产房管理从人工核算转向系统测算。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 20: 3-8 公产房场景演示 -->
+<div class="slide-container" data-slide="8">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">21 / 22</div>
+<h1>3.8 公产房场景演示：从申请入住到退房释放</h1>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>页面流程</td><td>申请 → 轮候评分 → 房源分配 → 入住管理 → 费用账单 → 年度核验 → 退房释放</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<h3 class="md-sync-heading">公产房场景演示流程步骤表</h3>
+<table class="md-sync-table">
+<thead><tr><th>流程步骤</th><th>步骤名称</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>步骤 1</td><td>申请</td><td>申请人填写个人信息、家庭成员、住房情况及证明材料； 房产管理员审核申请，审核通过后进入轮候评分，驳回后可修改再提交。</td></tr><tr><td>步骤 2</td><td>轮候评分</td><td>房产管理员录入轮候初始分、轮候起算时间、评分明细和附件； 系统形成当前轮候分和轮候排行，作为后续房源分配依据。</td></tr><tr><td>步骤 3</td><td>轮候分调整</td><td>特殊情况可按规则调整轮候分，分配时结合轮候排序、申请诉求和空置房源进行匹配。</td></tr><tr><td>步骤 4</td><td>房源分配</td><td>结合申请人房型诉求、轮候排序和当前空置房源确定分配结果； 记录分配房产、可入住日期和备注，系统生成待入住记录并通知申请人</td></tr><tr><td>步骤 5</td><td>入住管理</td><td>管理员通过入住情况查看在住人员、入住房间、入住日期、入住时长、房间面积和费用标准。</td></tr><tr><td>步骤 6</td><td>费用账单</td><td>系统按账单月份生成房租、物业费和应收总额； 费用根据房间面积、入住时长、租金标准和物业费标准计算； 缴费方式支持财务扣缴和个人自缴，个人自缴需上传缴费凭证； 房产管理员审核缴费凭证，并统计空置公产房物业费支出。</td></tr><tr><td>步骤 7</td><td>年度核验</td><td>房产管理员按年度发起核验任务，系统通知在住人员提交无房证明等材料； 核验材料由房产管理员审核，审核结果作为继续入住资格管理依据。</td></tr><tr><td>步骤 8</td><td>退房释放</td><td>住户可发起本人退房申请，由房产管理员确认退房； 特殊情况下可由房产管理员发起退房处理，退房完成后房源恢复为空闲可分配。</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- Slide 21: 3-9 模块二建设价值 -->
+<div class="slide-container" data-slide="9">
+<section class="slide long-scroll">
+<div class="module-label">模块二｜办公用房及公产房管理</div>
+<div class="slide-page-number">22 / 22</div>
+<h1>3.9 建设价值：管清房产底数，管住公房流转，支撑费用闭环</h1>
+<p class="subtitle">办公用房和公产房共同构成房产资源管理板块。 办公用房侧重空间资源底座，解决楼栋、楼层、房间、面积、用途和使用状态统一管理问题； 公产房侧重房源流转和费用管理，解决申请、分配、费用账单和退房释放闭环问题。</p>
+<div class="slide-body"><div class="md-sync-body">
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>文案类型</th><th>文案内容</th></tr></thead>
+<tbody><tr><td>主文案</td><td>办公用房和公产房共同构成房产资源管理板块。 办公用房侧重空间资源底座，解决楼栋、楼层、房间、面积、用途和使用状态统一管理问题； 公产房侧重房源流转和费用管理，解决申请、分配、费用账单和退房释放闭环问题。</td></tr><tr><td>价值标签 1</td><td>房产底数清</td></tr><tr><td>价值标签 2</td><td>空间状态准</td></tr><tr><td>价值标签 3</td><td>费用核算明</td></tr><tr><td>价值标签 4</td><td>房源流转顺</td></tr><tr><td>页面总结</td><td>推动房产管理从“人工台账、分散统计”转向“图账统一、状态可查、费用可算、流转可追”。</td></tr></tbody>
+</table>
+</section>
+<section class="md-sync-section">
+<table class="md-sync-table">
+<thead><tr><th>结构项</th><th>当前模块内容</th></tr></thead>
+<tbody><tr><td>模块名称</td><td>办公用房及公产房管理</td></tr><tr><td>业务现状</td><td>办公用房：楼宇信息未完整维护、空间底数不清、面积口径不一；公产房：房源状态不够清楚、入住流转缺少线上记录、费用核算耗时</td></tr><tr><td>建设方案</td><td>办公用房：统一测绘 + 统一口径 + 分类统计；公产房：申请轮候 + 分配入住 + 费用账单 + 退房释放</td></tr><tr><td>预期成效</td><td>办公空间资源一张账；房源状态与费用核算可视化</td></tr><tr><td>场景演示</td><td>办公空间资源查询与核查；公产房从申请入住到退房释放</td></tr><tr><td>建设价值</td><td>房产底数清、空间状态准、费用核算明、房源流转顺</td></tr></tbody>
+</table>
+</section>
+</div></div>
+</section>
+</div>
+<!-- ==================================================================
+             【模块三：物业管理】 SLIDES (22-28)
+             ================================================================== -->
+</div><!-- /stage -->
+<aside class="speaker-notes" id="speakerNotes">
+<div class="notes-header">
+<svg class="notes-header-svg" viewbox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg>
+<span class="notes-header-title">演讲词</span>
+</div>
+<div class="notes-body" id="notesBody">
+<!-- notes 12 -->
+<div class="notes-content active" data-notes="0"><div class="notes-label">模块二：办公用房及公产房管理</div><p class="notes-para">统一空间台账，支撑办公用房核查与公产房全流程管理</p><p class="notes-para">模块导航 1：办公用品及耗材管理</p><p class="notes-para">模块导航 2：办公用房及公产房管理</p><p class="notes-para">模块导航 3：物业管理</p><p class="notes-para">模块导航 4：公用会场预定管理</p><p class="notes-para">模块说明：办公用房：楼栋、楼层、房间、面积、状态；公产房：申请、轮候、分配、入住、费用、退房</p></div>
+<!-- notes 13 -->
+<div class="notes-content" data-notes="1"><div class="notes-label">3.1 办公用房业务现状：楼宇信息未完整维护、空间底数不清、面积口径不一</div><p class="notes-para">解决办公用房管理中“底数不清、面积不准、状态不明、统计困难”的问题。</p><p class="notes-para">痛点 1 标题：楼宇信息未完整维护</p><p class="notes-para">痛点 1 内容：部分办公楼宇、楼层、房间等基础信息尚未形成完整台账，后续统计缺少统一数据来源</p><p class="notes-para">痛点 2 标题：空间底数不清</p><p class="notes-para">痛点 2 内容：办公用房总面积不清楚，各类型用房分别占多少面积缺少统一统计，难以准确掌握资源规模和结构</p><p class="notes-para">痛点 3 标题：面积口径不一</p><p class="notes-para">痛点 3 内容：建筑面积、使用面积、房间面积等统计口径容易混用，导致不同汇总结果之间存在差异。</p><p class="notes-para">页面总结：办公用房管理的核心，是先把面积测准、台账补齐、口径统一、分类看清。</p></div>
+<!-- notes 14 -->
+<div class="notes-content" data-notes="2"><div class="notes-label">3.2 办公用房建设方案：统一测绘 + 统一口径 + 分类统计</div><p class="notes-para">以实测空间数据为基础，建立楼栋、楼层、房间一体化管理台账，形成空间资源可查、状态可管、面积可统的办公用房管理基础。</p><p class="notes-para">建设内容 1 标题：统一测绘</p><p class="notes-para">建设内容 1 内容：通过统一测绘核准楼栋、楼层、房间的面积数据，解决办公用房面积准不准、底数实不实的问题</p><p class="notes-para">建设内容 2 标题：补齐台账</p><p class="notes-para">建设内容 2 内容：按楼栋、楼层、房间逐步补齐基础信息，形成统一的办公用房资源台账</p><p class="notes-para">建设内容 3 标题：统一口径</p><p class="notes-para">建设内容 3 内容：区分建筑面积、使用面积、房间面积等统计口径，明确面积统计规则，避免数据混用。</p><p class="notes-para">建设内容 4 标题：分类统计</p><p class="notes-para">建设内容 4 内容：按楼栋、楼层、用房类型、面积口径等维度形成统计，支撑资源核查和管理分析。</p><p class="notes-para">页面总结：统一测绘解决“面积准不准”，补齐台账解决“有没有数据”， 统一口径解决“数据能不能对齐”，分类统计解决“结构能不能看清”。</p></div>
+<!-- notes 15 -->
+<div class="notes-content" data-notes="3"><div class="notes-label">3.3 办公用房预期成效：办公空间资源一张账</div><p class="notes-para">通过统一测绘、台账补齐和分类统计，逐步摸清办公用房总量、面积口径和类型结构。</p><p class="notes-para">指标：已测绘楼宇数量；系统建设后：已测绘办公楼宇：XX 栋；说明：通过统一测绘，摸清办公楼宇基础底数。</p><p class="notes-para">指标：已建账房间数量；系统建设后：已建账房间：XX 间；说明：按楼栋、楼层、房间建立空间台账</p><p class="notes-para">指标：办公用房总面积；系统建设后：核准办公用房总面积：XX ㎡；说明：以测绘成果为基础，形成统一面积数据。</p><p class="notes-para">指标：各类型用房面积；系统建设后：已分类用房类型：XX 类；说明：支持按办公、技术用房、公用用房、附属用房类型统计面积。</p><p class="notes-para">指标：统一面积口径；系统建设后：统一 3 类面积口径；说明：建筑面积、使用面积、房间面积分口径统计，避免混用。</p><p class="notes-para">页面总结：预期效果：面积数据更准、分类结构更清、统计口径更统一，为资源核查、空间调配和领导查询提供数据依据。</p></div>
+<!-- notes 16 -->
+<div class="notes-content" data-notes="4"><div class="notes-label">3.4 场景演示：办公空间资源查询与核查</div><p class="notes-para">页面总结：通过楼栋、楼层、房间和实测图纸联动， 管理人员可以快速回答“有哪些房、在哪里、谁在用、面积多少、状态如何”。</p><p class="notes-para">步骤 1，楼栋档案：查看楼栋基础信息，掌握建设年份、总建筑面积、楼层数量、楼栋用途和使用状态</p><p class="notes-para">步骤 2，楼层管理：按楼栋查看楼层信息，关联实测楼层平面图，直观掌握楼层空间分布、功能区构成和房间位置。</p><p class="notes-para">步骤 3，房间台账：查看房间编号、所属楼层、房间类型、建筑面积、使用面积、当前状态和使用单位。</p><p class="notes-para">步骤 4，统计分析：按楼栋、房间类型、使用状态和面积进行统计分析，为资源调配、空间利用分析和领导查询提供支撑。</p></div>
+<!-- notes 17 -->
+<div class="notes-content" data-notes="5"><div class="notes-label">3.5 公产房业务现状：从人工台账到动态闭环</div><p class="notes-para">解决公产房管理中“房源状态不清、申请轮候难管、费用核算耗时、退房释放不及时”的问题。</p><p class="notes-para">痛点 1 标题：房源状态不够清楚</p><p class="notes-para">痛点 1 内容：在住、空置、退房等状态依赖人工台账更新</p><p class="notes-para">痛点 2 标题：入住流转缺少线上记录</p><p class="notes-para">痛点 2 内容：申请、轮候、分配、入住过程难以完整追溯</p><p class="notes-para">痛点 3 标题：费用核算耗时</p><p class="notes-para">痛点 3 内容：房租、物业费清单需要人工计算、核对后提交财务</p><p class="notes-para">页面总结：公产房管理的重点，不是单纯管房间，而是管房源流转、人员入住和费用账单。</p></div>
+<!-- notes 18 -->
+<div class="notes-content" data-notes="6"><div class="notes-label">3.6 公产房建设方案：申请轮候 + 分配入住 + 费用账单 + 退房释放</div><p class="notes-para">围绕公产房从申请到退房的管理过程，形成房源动态管理和费用核算闭环。</p><p class="notes-para">建设内容 1 标题：申请轮候</p><p class="notes-para">建设内容 1 内容：线上申请、审核、评分排序</p><p class="notes-para">建设内容 2 标题：分配入住</p><p class="notes-para">建设内容 2 内容：匹配空置房源，形成入住记录</p><p class="notes-para">建设内容 3 标题：费用账单</p><p class="notes-para">建设内容 3 内容：按面积、标准、状态生成费用</p><p class="notes-para">建设内容 4 标题：退房释放</p><p class="notes-para">建设内容 4 内容：退房后房源恢复可分配</p><p class="notes-para">页面总结：公产房管理不是单点房源台账，而是从申请、分配、费用到账单、退房释放的闭环管理。</p></div>
+<!-- notes 19 -->
+<div class="notes-content" data-notes="7"><div class="notes-label">3.7 公产房预期成效：房源状态与费用核算可视化</div><p class="notes-para">通过房源、入住状态和费用账单数据沉淀，支撑公产房动态管理和费用核对。</p><p class="notes-para">指标：公产房总套数；系统建设后：在住、空置、退房等状态动态维护</p><p class="notes-para">指标：在住房源数；系统建设后：申请记录和轮候评分线上留痕</p><p class="notes-para">指标：空置房源数；系统建设后：分配结果线上记录，房源状态同步更新</p><p class="notes-para">指标：月度账单数量；系统建设后：系统按面积、标准和状态生成费用账单</p><p class="notes-para">指标：月度应收金额；系统建设后：费用清单可导出、可核对、可追溯</p><p class="notes-para">指标：空置房物业费测算金额；系统建设后：费用清单可导出、可核对、可追溯</p><p class="notes-para">页面总结：通过房源状态、入住信息和费用账单统一维护，推动公产房管理从人工核算转向系统测算。</p></div>
+<!-- notes 20 -->
+<div class="notes-content" data-notes="8"><div class="notes-label">3.8 公产房场景演示：从申请入住到退房释放</div><p class="notes-para">页面流程：申请 → 轮候评分 → 房源分配 → 入住管理 → 费用账单 → 年度核验 → 退房释放</p><p class="notes-para">步骤 1，申请：申请人填写个人信息、家庭成员、住房情况及证明材料； 房产管理员审核申请，审核通过后进入轮候评分，驳回后可修改再提交。</p><p class="notes-para">步骤 2，轮候评分：房产管理员录入轮候初始分、轮候起算时间、评分明细和附件； 系统形成当前轮候分和轮候排行，作为后续房源分配依据。</p><p class="notes-para">步骤 3，轮候分调整：特殊情况可按规则调整轮候分，分配时结合轮候排序、申请诉求和空置房源进行匹配。</p><p class="notes-para">步骤 4，房源分配：结合申请人房型诉求、轮候排序和当前空置房源确定分配结果； 记录分配房产、可入住日期和备注，系统生成待入住记录并通知申请人</p><p class="notes-para">步骤 5，入住管理：管理员通过入住情况查看在住人员、入住房间、入住日期、入住时长、房间面积和费用标准。</p><p class="notes-para">步骤 6，费用账单：系统按账单月份生成房租、物业费和应收总额； 费用根据房间面积、入住时长、租金标准和物业费标准计算； 缴费方式支持财务扣缴和个人自缴，个人自缴需上传缴费凭证； 房产管理员审核缴费凭证，并统计空置公产房物业费支出。</p><p class="notes-para">步骤 7，年度核验：房产管理员按年度发起核验任务，系统通知在住人员提交无房证明等材料； 核验材料由房产管理员审核，审核结果作为继续入住资格管理依据。</p><p class="notes-para">步骤 8，退房释放：住户可发起本人退房申请，由房产管理员确认退房； 特殊情况下可由房产管理员发起退房处理，退房完成后房源恢复为空闲可分配。</p></div>
+<!-- notes 21 -->
+<div class="notes-content" data-notes="9"><div class="notes-label">3.9 建设价值：管清房产底数，管住公房流转，支撑费用闭环</div><p class="notes-para">办公用房和公产房共同构成房产资源管理板块。 办公用房侧重空间资源底座，解决楼栋、楼层、房间、面积、用途和使用状态统一管理问题； 公产房侧重房源流转和费用管理，解决申请、分配、费用账单和退房释放闭环问题。</p><p class="notes-para">主文案：办公用房和公产房共同构成房产资源管理板块。 办公用房侧重空间资源底座，解决楼栋、楼层、房间、面积、用途和使用状态统一管理问题； 公产房侧重房源流转和费用管理，解决申请、分配、费用账单和退房释放闭环问题。</p><p class="notes-para">价值标签 1：房产底数清</p><p class="notes-para">价值标签 2：空间状态准</p><p class="notes-para">价值标签 3：费用核算明</p><p class="notes-para">价值标签 4：房源流转顺</p><p class="notes-para">页面总结：推动房产管理从“人工台账、分散统计”转向“图账统一、状态可查、费用可算、流转可追”。</p><p class="notes-para">结构项：模块名称；当前模块内容：办公用房及公产房管理</p><p class="notes-para">结构项：业务现状；当前模块内容：办公用房：楼宇信息未完整维护、空间底数不清、面积口径不一；公产房：房源状态不够清楚、入住流转缺少线上记录、费用核算耗时</p><p class="notes-para">结构项：建设方案；当前模块内容：办公用房：统一测绘 + 统一口径 + 分类统计；公产房：申请轮候 + 分配入住 + 费用账单 + 退房释放</p><p class="notes-para">结构项：预期成效；当前模块内容：办公空间资源一张账；房源状态与费用核算可视化</p><p class="notes-para">结构项：场景演示；当前模块内容：办公空间资源查询与核查；公产房从申请入住到退房释放</p></div>
+</div><!-- /notes-body -->
+</aside>
+
+</div><!-- /content-area -->
+</div><!-- /main-wrapper -->
+<!-- 进度条 -->
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+</div><!-- /app -->
+<script>
+(function () {
+  'use strict';
+
+  // 页面配置
+  const PAGE_CONFIG = {
+  "currentPage": "module2.html",
+  "slideOffset": 12,
+  "totalSlides": 35,
+  "nextPage": "module3.html",
+  "prevPage": "module1.html"
+};
+
+  const slides    = Array.from(document.querySelectorAll('.slide-container'));
+  const notesAll  = Array.from(document.querySelectorAll('.notes-content'));
+  const counter   = document.getElementById('counter');
+  const bar       = document.getElementById('progressBar');
+  const tocItems  = Array.from(document.querySelectorAll('.toc-item'));
+  const navTrigger = document.getElementById('navTrigger');
+  const sidebar    = document.getElementById('sidebar');
+  const stage      = document.getElementById('stage');
+  let current = 0;
+  const total = slides.length;
+  const SLIDE_W = 1080;
+  const SLIDE_H = 607.5;
+  const MIN_WINDOW_SCALE = 0.95;
+  const FULLSCREEN_STATE_KEY = 'reportFullscreenActive';
+
+  /* ─── 手风琴折叠展开 ─── */
+  window.toggleTocGroup = function(btn) {
+    const list = btn.nextElementSibling;
+    const arrow = btn.querySelector('.toc-arrow');
+    const isCollapsed = list.classList.toggle('collapsed');
+    arrow.textContent = isCollapsed ? '▶' : '▼';
+  };
+
+  function isFullscreenView() {
+    return !!(document.fullscreenElement || document.body.classList.contains('fullscreen-active'));
+  }
+
+  function setFullscreenPreference(enabled) {
+    sessionStorage.setItem(FULLSCREEN_STATE_KEY, enabled ? '1' : '0');
+  }
+
+  function navigateTo(url) {
+    setFullscreenPreference(isFullscreenView());
+    window.location.href = url;
+  }
+
+  function restoreFullscreenPreference() {
+    if (sessionStorage.getItem(FULLSCREEN_STATE_KEY) === '1') {
+      document.body.classList.add('fullscreen-active');
+    }
+  }
+
+  /* ─── 全局等比缩放计算器（窗口与全屏统一） ─── */
+  function resizeSlides() {
+    const activeContainer = document.querySelector('.slide-container.active');
+    if (!activeContainer) return;
+    
+    const slide = activeContainer.querySelector('.slide');
+    if (!slide) return;
+    
+    const containerW = stage.clientWidth;
+    const containerH = stage.clientHeight;
+    
+    const isLong = slide.classList.contains('long-scroll');
+    if (isLong) {
+      // 宽度等比缩放，高度自适应滚动
+      const scale = containerW / SLIDE_W;
+      
+      slide.style.transform = 'none';
+      slide.style.width = `${SLIDE_W}px`;
+      slide.style.height = 'auto';
+      const unscaledH = slide.scrollHeight;
+      
+      slide.style.transform = `scale(${scale})`;
+      slide.style.transformOrigin = 'top left';
+      
+      activeContainer.style.width = `${SLIDE_W * scale}px`;
+      activeContainer.style.height = `${unscaledH * scale}px`;
+      activeContainer.style.aspectRatio = 'auto';
+      activeContainer.style.margin = '20px auto';
+    } else {
+      // 16:9 标准尺寸缩放
+      
+      const isFs = isFullscreenView();
+      let scale = containerW / SLIDE_W;
+      if (isFs) {
+        scale = Math.min(containerW / SLIDE_W, containerH / SLIDE_H);
+      } else {
+        // 默认窗口也按同一画布比例放大，窗口较矮时允许纵向滚动。
+        scale = Math.min(containerW / SLIDE_W, Math.max(MIN_WINDOW_SCALE, containerH / 570));
+      }
+    
+      
+      slide.style.transform = `scale(${scale})`;
+      slide.style.transformOrigin = 'top left';
+      slide.style.width = `${SLIDE_W}px`;
+      slide.style.height = `${SLIDE_H}px`;
+      
+      activeContainer.style.width = `${SLIDE_W * scale}px`;
+      activeContainer.style.height = `${SLIDE_H * scale}px`;
+      activeContainer.style.aspectRatio = 'auto';
+      activeContainer.style.margin = 'auto';
+    }
+  }
+
+  /* ─── 目录高亮逻辑 ─── */
+  function highlightTOC(currentSlideIndex) {
+    tocItems.forEach(item => {
+      const itemPage = item.getAttribute('data-page') || 'index.html';
+      const itemSlide = parseInt(item.getAttribute('data-slide'), 10);
+      const isActive = (itemPage === PAGE_CONFIG.currentPage && itemSlide === currentSlideIndex);
+      item.classList.toggle('active', isActive);
+    });
+  }
+
+  /* ─── 切换幻灯片 ─── */
+  function showSlide(index) {
+    // 边界检测与跨页面跳转
+    if (index >= total) {
+      if (PAGE_CONFIG.nextPage) {
+        navigateTo(`${PAGE_CONFIG.nextPage}#slide0`);
+        return;
+      }
+      index = total - 1;
+    }
+    if (index < 0) {
+      if (PAGE_CONFIG.prevPage) {
+        navigateTo(`${PAGE_CONFIG.prevPage}#last`);
+        return;
+      }
+      index = 0;
+    }
+
+    current = index;
+
+    // 容器切换
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+
+    // 计算当前页缩放
+    resizeSlides();
+
+    // 目录高亮
+    highlightTOC(current);
+
+    // 自动展开激活目录的手风琴
+    const activeItem = document.querySelector(`.toc-item[data-page="${PAGE_CONFIG.currentPage}"][data-slide="${current}"]`);
+    if (activeItem) {
+      const parentList = activeItem.closest('.toc-list');
+      if (parentList) {
+        parentList.classList.remove('collapsed');
+        const parentArrow = parentList.previousElementSibling.querySelector('.toc-arrow');
+        if (parentArrow) parentArrow.textContent = '▼';
+      }
+    }
+
+    // 演讲词切换
+    notesAll.forEach((n, i) => n.classList.toggle('active', i === current));
+
+    // 重置演讲词面板滚动
+    const notesBody = document.getElementById('notesBody');
+    if (notesBody) notesBody.scrollTop = 0;
+
+    // 顶部计数器
+    const absNum = current + 1 + PAGE_CONFIG.slideOffset;
+    counter.textContent = `${absNum} / ${PAGE_CONFIG.totalSlides}`;
+
+    // 幻灯片内页码
+    const pageNumEl = slides[current].querySelector('.slide-page-number');
+    if (pageNumEl) {
+      pageNumEl.textContent = `${absNum} / ${PAGE_CONFIG.totalSlides}`;
+    }
+
+    // 进度条
+    bar.style.width = `${(absNum / PAGE_CONFIG.totalSlides) * 100}%`;
+
+    // 重置当前容器滚动位置
+    slides[current].scrollTop = 0;
+    stage.scrollTop = 0;
+  }
+
+  /* ─── 导航按钮 ─── */
+  document.getElementById('prevBtn').addEventListener('click', () => showSlide(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => showSlide(current + 1));
+
+  tocItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const page = item.getAttribute('data-page');
+      const slideIdx = parseInt(item.getAttribute('data-slide'), 10);
+      if (page === PAGE_CONFIG.currentPage) {
+        showSlide(slideIdx);
+      } else {
+        navigateTo(`${page}#slide${slideIdx}`);
+      }
+    });
+  });
+
+  /* ─── 全屏 ─── */
+  document.getElementById('fullBtn').addEventListener('click', async () => {
+    if (document.fullscreenElement || document.body.classList.contains('fullscreen-active')) {
+      document.body.classList.remove('fullscreen-active');
+      setFullscreenPreference(false);
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      }
+      resizeSlides();
+    } else {
+      await document.documentElement.requestFullscreen().catch(() => {
+        document.body.classList.add('fullscreen-active');
+        setFullscreenPreference(true);
+        resizeSlides();
+      });
+    }
+  });
+
+  function syncFullscreen() {
+    const isFs = !!document.fullscreenElement;
+    document.body.classList.toggle('fullscreen-active', isFs);
+    setFullscreenPreference(isFs);
+    document.body.classList.remove('nav-open');
+    resizeSlides();
+  }
+  document.addEventListener('fullscreenchange', syncFullscreen);
+
+  /* ─── 全屏侧边栏悬停 ─── */
+  if (navTrigger && sidebar) {
+    navTrigger.addEventListener('mouseenter', () => {
+      if (isFullscreenView()) {
+        document.body.classList.add('nav-open');
+      }
+    });
+    sidebar.addEventListener('mouseleave', () => {
+      document.body.classList.remove('nav-open');
+    });
+  }
+
+  /* ─── 监听重置 ─── */
+  window.addEventListener('resize', resizeSlides);
+
+  /* ─── 键盘快捷键 ─── */
+  document.addEventListener('keydown', (e) => {
+    const activeSlide = slides[current].querySelector('.slide');
+    const isLong = activeSlide.classList.contains('long-scroll');
+
+    // 场景演示页：上下键滚动内容
+    if (isLong && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      stage.scrollBy({ top: e.key === 'ArrowDown' ? 200 : -200, behavior: 'smooth' });
+      return;
+    }
+
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') showSlide(current + 1);
+    if (e.key === 'ArrowLeft'  || e.key === 'PageUp')   showSlide(current - 1);
+    if (e.key.toLowerCase() === 'f') document.getElementById('fullBtn').click();
+    if (e.key === 'Escape' && !document.fullscreenElement && document.body.classList.contains('fullscreen-active')) {
+      document.body.classList.remove('fullscreen-active');
+      setFullscreenPreference(false);
+      resizeSlides();
+    }
+  });
+
+  /* ─── 触摸滑动（移动端） ─── */
+  let touchStartX = 0;
+  stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) showSlide(dx < 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  /* ─── 初始化与哈希路由 ─── */
+  window.showSlide = showSlide;
+  window.navigateTo = navigateTo;
+  restoreFullscreenPreference();
+  
+  const initHash = window.location.hash;
+  if (initHash === '#last') {
+    showSlide(total - 1);
+  } else if (initHash && initHash.startsWith('#slide')) {
+    const slideIdx = parseInt(initHash.replace('#slide', ''), 10);
+    showSlide(slideIdx);
+  } else {
+    showSlide(0);
+  }
+})();
+</script>
+</body>
+</html>
