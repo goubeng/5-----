@@ -1456,82 +1456,25 @@ html, body {
 }
 
 
-/* ─── MD 同步版内容样式：确保 HTML 正文与 MD 表格逐项一致 ─── */
-.slide.long-scroll {
-  overflow-y: auto;
-  overflow-x: hidden;
+/* ─── 场景图片真实读取：保留原占位排版，放入 images/modelX/N.png 后自动显示 ─── */
+.img-placeholder .actual-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+  z-index: 1;
+  display: block;
 }
-
-.md-sync-body {
+.img-placeholder .actual-shot[style*="display: none"] ~ .img-placeholder-icon,
+.img-placeholder .actual-shot[style*="display: none"] ~ .img-placeholder-path {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding-bottom: 26px;
 }
-
-.md-sync-section {
-  width: 100%;
+.img-placeholder .actual-shot:not([style*="display: none"]) ~ .img-placeholder-icon,
+.img-placeholder .actual-shot:not([style*="display: none"]) ~ .img-placeholder-path {
+  opacity: 0;
 }
-
-.md-sync-heading {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--gold);
-  margin: 0 0 10px;
-  line-height: 1.45;
+.img-placeholder-tag {
+  z-index: 3;
 }
-
-.md-sync-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid var(--gold-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: rgba(255,255,255,0.025);
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-.md-sync-table th {
-  background: rgba(249,215,149,0.14);
-  color: var(--gold);
-  font-weight: 700;
-  text-align: left;
-  padding: 9px 12px;
-  border-bottom: 1px solid var(--gold-border);
-  white-space: nowrap;
-}
-
-.md-sync-table td {
-  color: var(--text-secondary);
-  padding: 9px 12px;
-  border-bottom: 1px solid rgba(249,215,149,0.10);
-  vertical-align: top;
-}
-
-.md-sync-table td:first-child {
-  color: var(--gold);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.md-sync-table tr:last-child td {
-  border-bottom: none;
-}
-
-.md-sync-table th:not(:last-child),
-.md-sync-table td:not(:last-child) {
-  border-right: 1px solid rgba(249,215,149,0.10);
-}
-
-.fullscreen-active .md-sync-table,
-:fullscreen .md-sync-table {
-  font-size: 15px;
-}
-
-.fullscreen-active .md-sync-heading,
-:fullscreen .md-sync-heading {
-  font-size: 21px;
-}
-

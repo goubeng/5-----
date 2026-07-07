@@ -1,0 +1,1 @@
+将本模块场景图片按编号放在此目录，例如 1.png、2.png。HTML 中使用路径 images/model3/编号.png 读取。
