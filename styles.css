@@ -1001,7 +1001,7 @@ html, body {
 }
 
 .model3-image-grid.repair-submit {
-  grid-template-columns: 0.57fr 0.57fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .model3-image-grid + .model3-image-grid,
